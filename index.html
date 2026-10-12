@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#050303">
+<meta name="color-scheme" content="dark">
+<title>The Devil's Angel</title>
+<meta name="description" content="The Devil's Angel: an international crime saga by Moexran. Explore the families, the map of sin, the playlist, and chat with the characters.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Devil's Angel">
+<meta property="og:description" content="Five crowns. One corrupted law. No clean hands. Meet the families and find out which one you belong to.">
+<meta property="og:image" content="https://file.garden/ad35P9foF0kAW7I8/TheDevilsAngel.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20width=%27100%27%20height=%27100%27%20rx=%2718%27%20fill=%27%23050303%27/%3E%3Cpath%20d=%27M50%2012L84%2050L50%2088L16%2050Z%27%20fill=%27%23b3121b%27%20stroke=%27%23d4a84b%27%20stroke-width=%276%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050303;--panel:#120808;--red:#b3121b;--red2:#e0252f;--gold:#d4a84b;--gold2:#f3d98b;--text:#e9e0d0;--mute:#9a8e7c;--line:rgba(212,168,75,.28);--gd:#b08a32;--gd2:#e0c06a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px;-webkit-text-size-adjust:100%}
+body{background:radial-gradient(ellipse at top,#1a0709 0,var(--bg) 55%);color:var(--text);font:20px/1.6 'Cormorant Garamond',serif;overflow-x:hidden}
+h1,h2,h3,.btn,nav a,.tag{font-family:'Cinzel',serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+/* header */
+header{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:.8rem 5vw;background:rgba(5,3,3,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font:900 1.1rem 'Cinzel',serif;color:var(--gold);text-decoration:none;letter-spacing:.12em}
+nav{display:flex;gap:1.6rem}
+nav a{font-size:.78rem;letter-spacing:.14em;text-decoration:none;color:var(--mute);padding:.3rem 0;border-bottom:2px solid transparent;transition:.25s}
+nav a:hover,nav a.on{color:var(--gold2);border-color:var(--red2)}
+#burger{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:1.4rem;padding:.1rem .6rem;cursor:pointer}
+/* banner */
+.banner{position:relative;min-height:92vh;min-height:92svh;display:grid;place-items:center;text-align:center;padding:4rem 6vw;overflow:hidden;border-bottom:3px double var(--gold)}
+.banner canvas{position:absolute;inset:0;width:100%;height:100%}
+.banner:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 110%,rgba(179,18,27,.55),transparent 60%),linear-gradient(transparent 60%,var(--bg))}
+.banner>div{position:relative;z-index:2;max-width:900px}
+.pre{font:700 .85rem 'Cinzel';letter-spacing:.5em;color:var(--red2)}
+h1{font-size:clamp(2.6rem,9vw,6.5rem);font-weight:900;line-height:1;margin:.8rem 0 1.4rem;background:linear-gradient(180deg,var(--gold2),var(--gold) 55%,#7a5a1c);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 28px rgba(179,18,27,.6))}
+.syn{font-style:italic;font-size:1.35rem;color:var(--text);max-width:680px;margin:0 auto 2rem}
+.btn{display:inline-block;padding:.8rem 1.8rem;font-size:.8rem;font-weight:700;letter-spacing:.18em;text-decoration:none;border:1px solid var(--gold);color:var(--gold2);background:linear-gradient(135deg,var(--red),#5a0a10);cursor:pointer;transition:.25s}
+.btn:hover{box-shadow:0 0 22px rgba(224,37,47,.6);transform:translateY(-2px)}
+.btn.ghost{background:none;margin-left:.6rem}
+/* sections */
+section{padding:5.5rem 6vw;max-width:1200px;margin:auto}
+.sh{text-align:center;margin-bottom:3rem}
+h2{font-size:clamp(1.8rem,5vw,2.8rem);color:var(--gold);letter-spacing:.1em}
+.sh:after{content:"";display:block;width:140px;height:2px;margin:1rem auto 0;background:linear-gradient(90deg,transparent,var(--red2),var(--gold),var(--red2),transparent)}
+.sh p{color:var(--mute);font-style:italic;margin-top:.6rem}
+/* lore */
+.lore{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem}
+.box{background:linear-gradient(160deg,var(--panel),#0a0505);border:1px solid var(--line);border-top:3px solid var(--red);padding:1.8rem;position:relative}
+.box:before,.box:after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--gold)}
+.box:before{top:6px;left:6px;border-right:0;border-bottom:0}.box:after{bottom:6px;right:6px;border-left:0;border-top:0}
+.box h3{color:var(--gold2);font-size:1.1rem;letter-spacing:.1em;margin-bottom:.6rem}
+.box p{color:var(--text);opacity:.9}
+.box.main{margin-bottom:1.4rem;padding:2.6rem 2.8rem}
+/* gold "World" box: deep antique gold so it stands apart from the red family boxes */
+.box.main{border:1px solid rgba(176,138,50,.55);border-top:4px solid var(--gd);border-image:linear-gradient(90deg,#6e5016,var(--gd2),#6e5016) 1;background:radial-gradient(ellipse at top,rgba(176,138,50,.16),transparent 65%),linear-gradient(160deg,#1c1507,#0b0804);box-shadow:0 0 34px rgba(176,138,50,.16),inset 0 0 40px rgba(176,138,50,.05)}
+.box.main:before,.box.main:after{width:20px;height:20px;border-color:var(--gd2)}
+.box.main:before{top:8px;left:8px}.box.main:after{bottom:8px;right:8px}
+.box.main h3{color:var(--gd2);text-shadow:0 0 18px rgba(176,138,50,.35);text-align:center;letter-spacing:.14em;font-size:1.6rem;margin-bottom:1rem}
+.box.main h3:after{content:"\25C6";display:block;font-size:.7rem;color:var(--gd);margin-top:.5rem;letter-spacing:0}
+.box.main .scroll{scrollbar-color:var(--gd) transparent}
+.box.main .scroll::-webkit-scrollbar-thumb{background:var(--gd)}
+.box.main .scroll>p:first-child:first-letter{font:900 2.6rem/1 'Cinzel',serif;color:var(--gd2);float:left;margin:.15rem .5rem 0 0}
+.box.main .scroll b{color:var(--gd2)}
+.box.main p{font-size:1.15rem;margin-bottom:.9rem;max-width:80ch}
+.box.main p:last-child{margin-bottom:0}
+/* scrollable description containers: ONE rule set for every description on the site */
+.scroll{max-height:15rem;overflow-y:auto;padding-right:.7rem;scrollbar-width:thin;scrollbar-color:var(--red) transparent}
+.scroll::-webkit-scrollbar{width:6px}
+.scroll::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px}
+.scroll.more{-webkit-mask-image:linear-gradient(#000 calc(100% - 2.4rem),transparent);mask-image:linear-gradient(#000 calc(100% - 2.4rem),transparent)}
+.scroll p{margin-bottom:.9rem}
+.scroll p:last-child{margin-bottom:0}
+.box.main .scroll{max-height:18rem}   /* main world description */
+.lore .box .scroll{max-height:10rem}  /* family boxes */
+.info .scroll{max-height:11rem;margin-bottom:.6rem} /* character cards + novel blurb */
+#cityInfo .scroll{max-height:16rem}   /* map city description */
+/* feature card (novel + characters) */
+.card{display:grid;grid-template-columns:240px 1fr;gap:2rem;padding:1.8rem;margin-bottom:2rem;background:linear-gradient(160deg,var(--panel),#080404);border:1px solid var(--line);position:relative;transition:.3s}
+.card:hover{border-color:var(--red2);box-shadow:0 0 30px rgba(179,18,27,.25)}
+.card.wide{grid-template-columns:280px 1fr;border-left:4px solid var(--gold)}
+.pic{aspect-ratio:2/3;background:linear-gradient(160deg,#3a0a0e,#0a0303);border:2px solid var(--gold);display:grid;place-items:center;font:900 4rem 'Cinzel';color:var(--gold);text-align:center;overflow:hidden;position:relative}
+.pic img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.pic .fb{text-align:center}
+.gal .ph .fb,.cgal .ph .fb,.ava .fb{position:absolute;inset:0;display:grid;place-items:center}
+.pic small{font-size:.7rem;letter-spacing:.2em;color:var(--mute);display:block}
+.info{min-width:0}
+.info h3{font-size:1.7rem;color:var(--gold2);letter-spacing:.06em}
+.role{color:var(--red2);font-style:italic;margin-bottom:.8rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin:.6rem 0 1rem}
+.tag{font-size:.65rem;letter-spacing:.12em;padding:.25rem .7rem;border:1px solid var(--gold);color:var(--gold);background:rgba(212,168,75,.07)}
+.tag.r{border-color:var(--red2);color:#ff7a80;background:rgba(224,37,47,.1)}
+.info .scroll p{max-width:62ch}
+.filters{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem;margin-bottom:2.2rem}
+.filters button{font:700 .72rem 'Cinzel';letter-spacing:.14em;padding:.55rem 1.1rem;background:none;color:var(--mute);border:1px solid var(--line);cursor:pointer;transition:.25s}
+.filters button.on,.filters button:hover{color:var(--gold2);background:var(--red);border-color:var(--gold)}
+/* map */
+.mapwrap{display:grid;grid-template-columns:1.6fr 1fr;gap:1.6rem;align-items:start}
+svg.map{width:100%;background:radial-gradient(circle,#160708,#060303);border:1px solid var(--line)}
+.land{fill:#1c0d0d;stroke:var(--gold);stroke-width:1;stroke-opacity:.5}
+.pin{cursor:pointer}.pin circle.c{fill:var(--red2);stroke:var(--gold2);stroke-width:2}
+.pin circle.p{fill:none;stroke:var(--red2);stroke-width:2;animation:pulse 2.2s infinite;transform-box:fill-box;transform-origin:center}
+.pin text{font:700 15px 'Cinzel';fill:var(--gold2);paint-order:stroke;stroke:#060303;stroke-width:4px;stroke-linejoin:round}
+.pin text.b{text-anchor:middle}
+.pin.on circle.c{fill:var(--gold)}
+@keyframes pulse{from{transform:scale(1);opacity:1}to{transform:scale(3.2);opacity:0}}
+.route{stroke:var(--red2);stroke-width:1.2;stroke-dasharray:5 6;fill:none;opacity:.6}
+#cityInfo h3{font-size:1.5rem;color:var(--gold2)}
+#cityInfo .c2{color:var(--red2);font:700 .75rem 'Cinzel';letter-spacing:.2em;margin-bottom:.8rem}
+/* gallery */
+.gal{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 0 1.2rem;scrollbar-color:var(--red) #120808}
+.gal figure{flex:0 0 min(320px,78vw);scroll-snap-align:start;border:1px solid var(--gold);background:var(--panel);padding:.6rem}
+.gal .ph{aspect-ratio:4/5;display:grid;place-items:center;background:linear-gradient(150deg,#3a0a0e,#0a0303);color:var(--mute);font:.7rem 'Cinzel';letter-spacing:.2em;position:relative;overflow:hidden}
+.gal .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gal figcaption{padding:.6rem .2rem 0;color:var(--gold2);font-style:italic}
+.galnav{display:flex;justify-content:center;gap:1rem;margin-top:.6rem}
+/* city galleries (small, landscape, under the map) */
+.cgal{margin-top:2.2rem}
+.cgal h4{font:700 .8rem 'Cinzel',serif;letter-spacing:.2em;color:var(--gold);margin-bottom:.7rem}
+.cgal .row{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.2rem 0 1rem;scrollbar-width:thin;scrollbar-color:var(--red) transparent}
+.cgal .row::-webkit-scrollbar{height:6px}.cgal .row::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px}
+.cgal figure{flex:0 0 min(240px,70vw);scroll-snap-align:start;border:1px solid var(--gold);background:var(--panel);padding:.4rem}
+.cgal .ph{aspect-ratio:16/10;display:grid;place-items:center;background:linear-gradient(150deg,#3a0a0e,#0a0303);color:var(--mute);font:.6rem 'Cinzel';letter-spacing:.2em;position:relative;overflow:hidden}
+.cgal .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cgal figcaption{padding:.4rem .2rem 0;color:var(--gold2);font-style:italic;font-size:.95rem;line-height:1.3}
+/* playlist */
+.pl{max-width:760px;margin:auto;background:linear-gradient(180deg,#1b0709,#080404);border:1px solid var(--line);padding:1.6rem}
+.plh{display:flex;gap:1.2rem;align-items:flex-end;margin-bottom:1.4rem}
+.plh .cov{width:120px;height:120px;background:linear-gradient(135deg,var(--red),#2a0508);border:2px solid var(--gold);display:grid;place-items:center;font:900 2.4rem 'Cinzel';color:var(--gold)}
+.plh h3{font-size:1.6rem;color:var(--gold2)}.plh p{color:var(--mute);font-size:.95rem}
+.trk{cursor:pointer;color:inherit;text-decoration:none;display:grid;grid-template-columns:2rem 1fr auto;gap:1rem;align-items:center;padding:.7rem .8rem;border-bottom:1px solid rgba(212,168,75,.12);transition:.2s}
+.trk:hover,.trk:focus-visible{background:rgba(179,18,27,.22)}
+.trk b{display:block;font-weight:600;color:var(--text)}.trk span{color:var(--mute);font-size:.9rem}
+.trk i{font-style:normal;color:var(--gold);font-family:'Cinzel';font-size:.8rem}
+.plbtn{text-align:center;margin-top:1.6rem}
+/* footer */
+footer{margin-top:4rem;padding:3rem 6vw;text-align:center;border-top:3px double var(--gold);background:linear-gradient(var(--bg),#1a0507)}
+footer .logo{font-size:1.4rem}
+footer p{color:var(--mute);font-size:.95rem;margin-top:.7rem}
+.soc{display:flex;justify-content:center;gap:1.4rem;margin:1.2rem 0}
+.soc a{font:.75rem 'Cinzel';letter-spacing:.15em;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--red2)}
+#top{position:fixed;right:1.2rem;bottom:1.2rem;width:44px;height:44px;border:1px solid var(--gold);background:var(--red);color:var(--gold2);cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:40}
+#top.show{opacity:1;pointer-events:auto}
+#prog{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--red2),var(--gold));z-index:99;width:0}
+.warn{margin-top:2rem;font-size:.85rem;color:var(--mute);font-style:italic}
+/* scroll reveal (only active when JS is running) */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease,border-color .3s,box-shadow .3s}
+.js .rv.in{opacity:1;transform:none}
+/* placeholder buttons */
+.btn.off{opacity:.45;border-style:dashed;cursor:default;pointer-events:none}
+/* character search */
+.search{max-width:420px;margin:0 auto 2rem}
+.search input{width:100%;padding:.75rem 1rem;font:1rem 'Cormorant Garamond',serif;color:var(--text);background:#0c0606;border:1px solid var(--line);border-radius:0;-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:var(--mute);font-style:italic}
+.search input:focus{outline:2px solid var(--gold);outline-offset:2px}
+.filters button em{font-style:normal;opacity:.65;margin-left:.35em}
+/* map prev/next + gallery counter */
+.cnav{display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--line)}
+.cnav button{font:700 .7rem 'Cinzel';letter-spacing:.14em;padding:.7rem 1rem;min-height:44px;background:none;color:var(--gold2);border:1px solid var(--line);cursor:pointer}
+.cnav button:active,.cnav button:hover{background:var(--red);border-color:var(--gold)}
+.cnav span{font:.7rem 'Cinzel';letter-spacing:.14em;color:var(--mute)}
+.galcount{font:.75rem 'Cinzel';letter-spacing:.2em;color:var(--mute);align-self:center;min-width:6ch;text-align:center}
+@media(max-width:820px){
+section{padding:3.8rem 5vw}
+.box.main{padding:1.8rem 1.3rem}
+.box.main p{font-size:1.05rem}
+.banner .btn{display:block;max-width:300px;margin:.7rem auto 0}.btn.ghost{margin-left:auto}
+.pin text{font-size:30px}.pin circle.c{r:11px}.pin circle.p{r:10px}
+.plh .cov{width:90px;height:90px}
+.trk{grid-template-columns:1.4rem 1fr auto;gap:.7rem}
+.card,.card.wide{grid-template-columns:minmax(0,1fr)}.pic{width:100%;max-width:240px;margin:0 auto}
+.mapwrap{grid-template-columns:1fr}
+}
+
+/* nav: switch to burger earlier so 9 links never squash */
+@media(max-width:1100px){
+#burger{display:block}
+nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#050303;border-bottom:1px solid var(--line);display:none}
+nav.open{display:flex}nav a{padding:1rem 6vw}
+}
+/* trailer */
+.trailer{margin-top:2.2rem;text-align:center}
+.trailer h3{font-size:1rem;letter-spacing:.3em;color:var(--gold2);margin-bottom:1rem}
+.trailer video{display:block;width:100%;max-width:900px;margin:0 auto;aspect-ratio:16/9;background:#000;border:1px solid var(--gold);box-shadow:0 0 40px rgba(179,18,27,.35)}
+/* lightbox */
+.gal .ph img,.cgal .ph img,.pic img{cursor:zoom-in}
+#lb{position:fixed;inset:0;z-index:120;background:rgba(5,3,3,.95);display:none;flex-direction:column;align-items:center;justify-content:center;padding:3.5rem 1rem 1.5rem;cursor:zoom-out}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:78vh;max-height:78svh;object-fit:contain;border:2px solid var(--gold);box-shadow:0 0 40px rgba(179,18,27,.4)}
+#lb p{color:var(--gold2);font-style:italic;margin-top:.9rem;text-align:center;max-width:60ch}
+#lbx{position:absolute;top:.8rem;right:.8rem;width:46px;height:46px;border:1px solid var(--gold);background:var(--red);color:var(--gold2);font-size:1.3rem;cursor:pointer}
+/* quiz */
+.quiz{max-width:640px;margin:auto}
+.quiz .qn{font:.7rem 'Cinzel';letter-spacing:.2em;color:var(--mute);margin-bottom:.6rem}
+.quiz h3{font-size:1.35rem;line-height:1.3;outline:none}
+.qbar{height:3px;background:#2a1a1a;margin:.2rem 0 1rem}.qbar div{height:100%;background:linear-gradient(90deg,var(--red2),var(--gold));transition:width .4s}
+.qopt{display:block;width:100%;text-align:left;font:1.1rem/1.3 'Cormorant Garamond',serif;padding:.85rem 1rem;margin-top:.55rem;min-height:48px;background:#0c0606;color:var(--text);border:1px solid var(--line);cursor:pointer;transition:.2s}
+.qopt:active,.qopt:focus-visible{background:var(--red);border-color:var(--gold);color:var(--gold2)}
+@media(hover:hover){.qopt:hover{background:var(--red);border-color:var(--gold);color:var(--gold2)}}
+.quiz .res{text-align:center}
+.quiz .res .c2{color:var(--red2);font:700 .75rem 'Cinzel';letter-spacing:.25em}
+.quiz .res h3{font-size:1.9rem;margin:.5rem 0 .8rem;color:var(--gold2)}
+.quiz .res p{margin-bottom:1.2rem}
+.quiz .res .btn{margin:.3rem}
+.quiz .res .btn.ghost{margin-left:.3rem}
+/* afterword */
+#afterword{padding-top:3rem}
+.aw{max-width:760px;margin:auto}
+.awt{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-align:left;padding:1.2rem 1.4rem;min-height:64px;background:linear-gradient(160deg,#1d0a0c,#0a0505);color:var(--gold2);border:1px solid var(--gold);border-left:4px solid var(--red2);font:700 1rem 'Cinzel',serif;letter-spacing:.14em;cursor:pointer;transition:.25s}
+.awt small{display:block;font:italic 400 1rem 'Cormorant Garamond',serif;letter-spacing:0;color:var(--mute);margin-top:.2rem}
+.awt:hover,.awt[aria-expanded=true]{box-shadow:0 0 26px rgba(179,18,27,.35)}
+.awt i{font-style:normal;color:var(--gold);font-size:1.1rem;transition:transform .35s;flex:none}
+.awt[aria-expanded=true] i{transform:rotate(180deg)}
+.awp{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease}
+.aw.open .awp{grid-template-rows:1fr}
+.awi{overflow:hidden;min-height:0;visibility:hidden;transition:visibility .45s}
+.aw.open .awi{visibility:visible}
+.awb{padding:1.8rem 1.6rem 1.6rem;border:1px solid var(--line);border-top:0;background:linear-gradient(160deg,var(--panel),#080404)}
+.awh{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.ava{flex:none;width:84px;height:84px;border:2px solid var(--gold);background:linear-gradient(160deg,#3a0a0e,#0a0303);position:relative;overflow:hidden;display:grid;place-items:center;font:900 2rem 'Cinzel';color:var(--gold)}
+.ava img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.awh h3{font-size:1.3rem;color:var(--gold2);letter-spacing:.08em}
+.awh span{color:var(--red2);font-style:italic}
+.awb .txt p{margin-bottom:1rem;font-size:1.12rem}
+.awb .sig{font:700 .95rem 'Cinzel',serif;letter-spacing:.2em;color:var(--gold);text-align:right;margin-top:1.2rem}
+/* read more / show less (replaces scroll-inside-scroll traps on touch screens) */
+.scroll.open{max-height:none!important;overflow:visible!important}
+.xp{display:block;margin:.5rem auto 0;min-height:44px;padding:.5rem .3rem;background:none;border:0;border-bottom:1px solid var(--red2);color:var(--gold);font:700 .68rem 'Cinzel',serif;letter-spacing:.16em;cursor:pointer}
+.xp[hidden]{display:none}
+.xp:hover{color:var(--gold2)}
+.info .xp{margin:0 0 .8rem}
+/* family colour accents */
+.card.ch{border-left:4px solid var(--fc)}
+.card.ch:hover{border-left-color:var(--fc)}
+.filters button[style]:before{content:"";display:inline-block;width:.55em;height:.55em;margin-right:.55em;border-radius:50%;background:var(--fc);box-shadow:0 0 0 1px var(--gold2)}
+/* quiz result bars */
+.rbs{max-width:420px;margin:1.2rem auto 1.4rem;text-align:left}
+.rb{display:grid;grid-template-columns:7.5rem 1fr 3rem;gap:.6rem;align-items:center;margin:.4rem 0;font:.62rem 'Cinzel',serif;letter-spacing:.12em;color:var(--mute)}
+.rb>div{height:6px;background:#2a1a1a;border-radius:3px;overflow:hidden}
+.rb i{display:block;width:var(--w);height:100%;border-radius:3px;animation:grow .9s ease-out}
+.rb em{font-style:normal;text-align:right;color:var(--gold2)}
+@keyframes grow{from{width:0}}
+.hint{text-align:center;color:var(--mute);font-style:italic;font-size:.9rem;margin-top:1.2rem}
+.pin circle.h{fill:transparent}
+footer .btn{margin-top:.4rem}
+/* lightbox arrows */
+#lbp,#lbn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:60px;border:1px solid var(--gold);background:rgba(179,18,27,.88);color:var(--gold2);font-size:1.2rem;cursor:pointer;display:none;z-index:2}
+#lbp{left:.5rem}#lbn{right:.5rem}
+#lb.multi #lbp,#lb.multi #lbn{display:block}
+#lb img{touch-action:pan-y}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== characters: capped height, scrolls inside ===== */
+.cwrap{position:relative;border:1px solid var(--line);background:rgba(5,3,3,.5)}
+.cwrap:after{content:"";position:absolute;left:0;right:8px;bottom:0;height:56px;background:linear-gradient(transparent,var(--bg));pointer-events:none;transition:opacity .3s}
+.cwrap.end:after{opacity:0}
+#chars{position:relative;max-height:min(78vh,760px);max-height:min(78svh,760px);overflow-y:auto;padding:1rem;scrollbar-width:thin;scrollbar-color:var(--red) transparent;-webkit-overflow-scrolling:touch}
+#chars::-webkit-scrollbar{width:7px}#chars::-webkit-scrollbar-thumb{background:var(--red);border-radius:4px}
+#chars .card:last-child{margin-bottom:3rem}
+.cmeta{display:flex;justify-content:space-between;align-items:center;gap:.6rem;margin-bottom:.7rem;font:.68rem 'Cinzel',serif;letter-spacing:.16em;color:var(--mute)}
+.card.hl{border-color:var(--gold2);box-shadow:0 0 34px rgba(243,217,139,.35)}
+.fav{position:absolute;top:.6rem;right:.6rem;width:44px;height:44px;background:rgba(5,3,3,.7);border:1px solid var(--line);color:var(--gold);font-size:1.3rem;cursor:pointer;z-index:2}
+.fav[aria-pressed=true]{color:var(--red2);border-color:var(--red2);background:rgba(224,37,47,.12)}
+.search{display:flex;gap:.6rem;max-width:560px}
+.search input{flex:1;min-width:0}
+.search button{flex:none;min-height:44px;padding:0 1rem;font:700 .68rem 'Cinzel',serif;letter-spacing:.14em;color:var(--gold2);background:var(--red);border:1px solid var(--gold);cursor:pointer}
+/* ===== stats + spotlight ===== */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;max-width:1000px;margin:-2.2rem auto 0;position:relative;z-index:5;background:var(--line);border:1px solid var(--line)}
+.stats div{background:#0a0505;padding:1.1rem .4rem;text-align:center}
+.stats b{display:block;font:900 clamp(1.6rem,6vw,2.6rem) 'Cinzel',serif;color:var(--gold2)}
+.stats span{font:.62rem 'Cinzel',serif;letter-spacing:.2em;color:var(--mute)}
+.spot{display:flex;align-items:center;gap:1.1rem;max-width:760px;margin:2rem auto 0;padding:.9rem;border:1px solid var(--gold);border-left:4px solid var(--fc,var(--red2));background:linear-gradient(160deg,var(--panel),#080404);cursor:pointer;width:calc(100% - 10vw);text-align:left;color:inherit;font:inherit}
+.spot .ava{width:72px;height:72px;flex:none;font-size:1.6rem}
+.spot small{display:block;font:700 .6rem 'Cinzel',serif;letter-spacing:.24em;color:var(--red2)}
+.spot h3{font-size:1.2rem;color:var(--gold2)}.spot em{color:var(--mute);font-size:.95rem}
+.spot i{margin-left:auto;font-style:normal;color:var(--gold);font-size:1.4rem}
+.quiz.t{border-top-color:var(--fc);box-shadow:0 0 36px rgba(179,18,27,.2)}
+@media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr);margin-top:-1.5rem}.search{flex-wrap:wrap}.search button{flex:1}#chars{padding:.6rem}}
+</style>
+</head>
+<body>
+<noscript><p style="padding:2rem;text-align:center">This site needs JavaScript turned on to show its content.</p></noscript>
+<div id="prog"></div>
+<header>
+  <a class="logo" href="#home">THE DEVIL'S ANGEL</a>
+  <button id="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+  <nav id="nav">
+    <a href="#home">HOME</a><a href="#lore">LORE</a><a href="#novel">NOVEL</a><a href="#map">MAP</a><a href="#gallery">GALLERY</a><a href="#playlist">PLAYLIST</a><a href="#quiz">QUIZ</a><a href="#characters">CHARACTERS</a><a href="#afterword">AFTERWORD</a>
+  </nav>
+</header>
+
+<div class="banner" id="home">
+  <canvas id="embers"></canvas>
+  <div>
+    <div class="pre">A SERIES BY MOEXRAN</div>
+    <h1>The Devil's Angel</h1>
+    <p class="syn">They say devils don't need saving. But what if he was begging for it behind a heart that forgot how to hope? From mafia bosses to enforcers. From loansharks to corrupted lawyers. <b>Can you survive the fall?</b></p>
+    <a class="btn" href="#characters">MEET THE FAMILIES</a><a class="btn ghost" href="#novel">READ THE NOVEL</a>
+  </div>
+</div>
+<div class="stats rv" id="stats"></div>
+<button class="spot rv" id="spot" type="button" hidden></button>
+
+<section id="lore">
+  <div class="sh rv"><h2>THE UNDERWORLD</h2><p>Five crowns. One corrupted law. No clean hands.</p></div>
+  <div class="box main rv">
+    <h3>The World of The Devil's Angel</h3>
+    <div class="scroll"><p>In a world where power is inherited, loyalty is bought, and blood is the price of betrayal, even the most beautiful things are built upon ugly truths.</p>
+<p><b>The Devil's Angel</b> is an international crime saga set within the glittering yet treacherous underworld of Europe and beyond. From the romantic boulevards of Paris to the ruthless streets of Milan, the shadowed estates of Sicily, the unforgiving winters of Moscow, the political corridors of Jakarta, and the quietly dangerous institutions of London, power takes many forms—<b>but its appetite remains the same.</b></p>
+<p>At the center of this world stands the Allard family, a French criminal dynasty whose carefully constructed empire is threatened by a wound that money cannot mend: <b>a brotherhood shattered by succession.</b> When François Allard names his younger son, Cyrille, as his heir instead of his firstborn, Astin, a family dispute becomes the fault line of an international power struggle. One brother fights to protect the empire he was entrusted with; the other seeks to reclaim the legacy he believes was stolen from him.</p>
+<p>Their conflict does not remain theirs for long. Lucio Borghese, Milan's flamboyant and merciless kingpin, sees opportunity in the Allard family's fractures. Mateo Montanari, Sicily's disciplined and calculating master, watches from a distance, waiting for the moment intervention becomes profitable. In Moscow, Vladimir Romanov commands a criminal empire so feared that even his silence carries weight—and his quiet recognition of Cyrille may prove more consequential than any public declaration of allegiance.</p>
+<p>Beyond the traditional mafia empires, another kind of power thrives. In Jakarta, Edward Winata disguises corruption beneath the polished image of political success, proving that the most effective criminal empires do not always need to operate outside the law. Meanwhile, London remains a city of shifting allegiances, where compromised lawyers, former soldiers, and powerful patrons navigate the uncertain boundary between justice and influence.</p>
+<p>Yet this is not merely a story about empires, rivalries, and men who believe themselves untouchable. It is a story about the people hidden beneath their reputations—the brothers who cannot forget, the loyalists who have nowhere else to belong, the monsters who refuse to admit they are lonely, and the powerful who discover that love is the one thing they cannot <b>control.</b></p>
+<p>Here, affection can become a weakness. Loyalty can become a prison. And love, once it finds its way into the heart of a dangerous man, can become the most devastating liability of all.</p>
+<p><b>In a world ruled by devils, even an angel must decide what they are willing to sacrifice.</b></p></div>
+  </div>
+  <div class="lore">
+    <div class="box rv"><h3>The Allard Family</h3><div class="scroll"><p><b>Paris.</b> Founded in the 1930s by Louis Allard, the family began as a modest criminal operation dealing in smuggling and illegal gambling. Over the decades, it evolved into one of France's most formidable syndicates, maintaining a discreet but persistent influence under François Allard before reaching unprecedented heights under his second son, Cyrille.</p>
+<p>Today, the Allards are a dynasty of extraordinary wealth and carefully cultivated prestige. Their public empire spans fashion, automotive parts, and logistics; their private one extends into narcotics, arms trafficking, assassination, cybercrime, and money laundering. Billions flow through a labyrinth of shell companies and offshore accounts, concealing the true scale of their influence from the very society that helps sustain it.</p>
+<p><i>Yet the greatest threat to the Allard empire may not come from a rival family. It comes from within.</i></p>
+<p>François's decision to name Cyrille his successor instead of his firstborn, Astin, fractured the family at its core. Astin considers the inheritance a birthright stolen from him and is determined to reclaim his position. Cyrille, meanwhile, is caught between his duty to his promise to François and his unwillingness to destroy his own brother. But affection cannot erase ambition, and blood does not guarantee loyalty.</p>
+<p>For the Allards, reputation is everything. Loyalty is expected. Secrecy is absolute. Anyone who threatens the family risks becoming a cautionary tale.</p></div></div>
+
+    <div class="box rv"><h3>The Borghese Family</h3><div class="scroll"><p><b>Milan.</b> Wealth, ruthlessness, and an appetite for victory define the Borghese family. Led by Lucio Borghese, this Italian criminal dynasty has built its empire on weapons, narcotics, extortion, and the kind of intimidation that makes even powerful men reconsider their alliances.</p>
+<p>Unlike the Allards, who prefer to conceal the machinery of their empire behind legitimate enterprise, the Borghese are far less interested in appearing innocent. They operate openly within Milan's criminal underworld, collecting protection money and enforcing their authority through fear. Their methods are cunning, vicious, and often deliberately cruel. To Lucio, victory matters more than the rules—<i>and he has little patience for those who mistake restraint for strength.</i></p>
+<p>His ambitions extend beyond Milan. By supporting Astin Allard's attempt to overthrow Cyrille, Lucio has positioned himself at the heart of the Allard succession crisis. Whether driven by opportunity, revenge, or the prospect of a weakened rival, his interference threatens to turn a family dispute into an international power struggle.</p>
+<p>Despite their brutality, the Borghese maintain a strict code: women and children are not to be harmed, nor are they to be knowingly placed in harm's way. Lucio's contempt for human trafficking is one of the few boundaries he refuses to cross.</p>
+<p><i>It is a peculiar morality, perhaps, but even a beast has rules of its own.</i></p>
+</div></div>
+
+    <div class="box rv"><h3>The Romanov Family</h3><div class="scroll"><p><b>Moscow.</b> Little is known about the origins of the Romanov criminal empire. Rumors suggest its rise began during the Soviet era, when secrecy was currency and violence could determine the fate of nations. Whatever the truth, the family has since established itself as one of the most feared forces in the Russian underworld.</p>
+<p>Their operations span weapons, narcotics, and human trafficking, supported by an organization whose internal workings remain largely concealed. The Romanovs do not seek public approval, nor do they waste effort cultivating a respectable image. Their reputation precedes them, and their brutality ensures that few are willing to test whether the stories are exaggerated.</p>
+<p>At the head of the family stands Vladimir Romanov, the pakhan—a man whose life is obscured by rumor, whose motives remain difficult to discern, and whose capacity for violence has become the stuff of whispered legend. Some claim he committed his first murder before experiencing his first kiss. Whether truth or myth, the story captures what makes him so unsettling: the sense that whatever humanity he possesses has always existed alongside something far more dangerous.</p>
+<p>Yet Vladimir's relationship with the Allards defies expectation. He tolerates their presence, maintains an unusual rapport with Cyrille, and has implicitly recognized him as the legitimate heir to the Allard empire. In a world where alliances are rarely unconditional, his support is significant—even if no one can be certain what it will ultimately cost.</p>
+<p><i>The monster has no need to explain himself. The world has already learned to fear the silence.</i></p>
+</div></div>
+
+    <div class="box rv"><h3>The Montanari Family</h3><div class="scroll"><p><b>Sicily.</b> The Montanari family is an empire of quiet authority, disciplined ambition, and calculated restraint. Under Mateo Montanari, its operations flourish away from public scrutiny, sustained by illegal enterprises, online gambling, and casinos that turn chance into a remarkably profitable business.</p>
+<p>Mateo is not a man who mistakes violence for power. Cold, precise, and fiercely controlled, he rules through efficiency rather than spectacle. He values loyalty, despises unnecessary cruelty, and considers emotional impulsiveness a liability. Every decision serves a purpose; every action carries a consequence.</p>
+<p>The Montanari have little interest in the Allard succession crisis. Cyrille and Astin may fight over their father's legacy, and Lucio Borghese may indulge himself in the chaos, but Mateo has no intention of becoming another man's pawn. His neutrality, however, is not an oath of peace. He simply prefers to wait until the outcome becomes worth his attention.</p>
+<p>If the balance of power shifts in a way that benefits him, Mateo will not hesitate to act. He has no need to start a war when he can profit from the moment it ends.</p>
+<p><i>The master does not chase opportunities. He lets them come within reach.</i></p>
+</div></div>
+
+    <div class="box rv"><h3>The Winata Family</h3><div class="scroll"><p><b>Jakarta.</b> The Winata family is the embodiment of respectable power. A wealthy dynasty of entrepreneurs, businessmen, and politicians, they have spent generations building a reputation that is as immaculate as it is useful. Their name commands respect in corporate boardrooms and government corridors alike, and their influence reaches into the institutions that shape the nation.</p>
+<p>At the center of the dynasty stands Edward Winata, a popular and beloved politician whose public image embodies everything the family wishes the world to believe. Charismatic and influential, he represents stability, ambition, and national progress. Few would suspect that the empire behind his success is deeply entangled with organized crime and systemic corruption.</p>
+<p>Unlike families that rule through visible violence, the Winatas understand the power of institutions. Their weapons are political favors, compromised loyalties, financial leverage, and the quiet manipulation of systems meant to serve the public. They do not merely seek wealth; they seek the kind of influence that makes wealth almost irrelevant. When business, government, and criminal interests become inseparable, opposition becomes extraordinarily difficult.</p>
+<p>Their greatest strength is also their greatest disguise. The Winatas have cultivated a world in which their legitimacy is rarely questioned, their enemies struggle to find a way in, and the machinery of accountability can be made to work in their favor.</p>
+<p><i>Some empires are built by conquering the throne. Others are built by becoming the throne.</i></p>
+</div></div>
+
+    <div class="box rv"><h3>London</h3><div class="scroll"><p><b>London.</b> Unlike Paris, Milan, Moscow, or Jakarta, London has no single family that can claim undisputed dominion over its underworld. Its power structure is fragmented, its loyalties fluid, and its most influential players often operate far beyond the reach of conventional authority.</p>
+<p>London is where the worlds of crime, politics, law, and private security intersect. Here, power belongs to those who know which doors to open, which secrets to bury, and which people can be bought. Alliances are temporary, loyalties negotiable, and the difference between the law and those who exploit it is often a matter of perspective.</p>
+<p>Among its many players is William, a corrupt lawyer whose professional allegiance extends only as far as his next lucrative arrangement. He serves the powerful, negotiates with the criminal, and bends the law for whoever can afford his services. In William's world, justice is not blind. It simply has a price.</p>
+<p>Then there is Arthur, a former Special Air Service operative who has traded military service for a different kind of battlefield. Now employed as a bodyguard to a prominent political family, he operates in the dangerous space between public respectability and private vulnerability. Where William profits from compromised principles, Arthur survives by discipline, vigilance, and the knowledge that some threats cannot be settled in a courtroom.</p>
+<p>Neither man rules London. Both understand how its shadows work.</p>
+<p><i>In a city built on institutions, the most dangerous people are often those who know exactly how to use them.</i></p>
+</div></div>
+  </div>
+</section>
+
+<section id="novel">
+  <div class="sh rv"><h2>THE ORIGINAL NOVEL</h2><p>Where the fall begins.</p></div>
+  <article class="card wide rv">
+    <div class="pic" id="cover"></div>
+    <div class="info">
+      <h3>The Devil's Angel</h3>
+      <div class="role">Book One</div>
+      <div class="tags"><span class="tag">MAFIA</span><span class="tag">DARK ROMANCE</span><span class="tag r">DEAD DOVE</span><span class="tag">ORGANIZED CRIME</span><span class="tag r">HURT/COMFORT</span></div>
+      <div class="scroll">
+        <p>When ambitious law student Evelyn Moore saved a bleeding stranger from a lethal assassination attempt, she didn't just save a life—she invoked the obsessive devotion of Cyrille Allard, the ruthless, enigmatic kingpin of a massive mafia empire. Swept into a whirlwind of dark desire, lethal deception, and bloody power struggles, Evelyn is dragged deep into a ruthless shadowy domain where loyalty is dead and betrayal waits in every breath.</p>
+<p>With a vengeful rival brother waging all-out war for control and the crosshairs of a criminal underworld closing in, love becomes their most dangerous weapon. To survive the darkness, they must defy the world—<b>or be completely torn apart by the very shadows that bind them.</b></p>
+      </div>
+      <a class="btn" href="https://www.wattpad.com/story/366543079-the-devil%27s-angel-the-wattys-2025" target="_blank" rel="noopener">READ NOW</a>
+    </div>
+  </article>
+</section>
+
+<section id="map">
+  <div class="sh rv"><h2>THE MAP OF SIN</h2><p>Six places. One web of debts. <b>Tap a pin.</b></p></div>
+  <div class="mapwrap">
+    <svg class="map" viewBox="0 0 1000 520" role="img" aria-label="Map with Paris, Milan, Sicily, Moscow, London and Jakarta marked">
+      <g class="land">
+        <path d="M190 300L200 270L250 262L290 235L320 225L345 215L380 205L420 190L440 160L480 150L520 110L600 80L700 70L780 90L780 330L700 340L640 320L600 340L560 330L520 300L480 320L470 350L440 330L400 310L380 300L330 310L290 330L250 340L200 345Z"/>
+        <path d="M420 300L460 310L480 360L510 400L490 410L450 380L425 335Z"/>
+        <path d="M300 150L330 140L345 175L350 200L320 215L295 205L310 180Z"/>
+        <path d="M430 150L460 60L520 30L580 40L560 90L520 100L490 150Z"/>
+        <path d="M452 428L488 418L498 430L482 442L458 438Z"/>
+        <path d="M770 350L800 360L850 410L862 432L836 426L790 390Z"/>
+        <path d="M848 450L900 440L955 448L948 460L890 460L852 458Z"/>
+        <path d="M890 380L920 365L950 385L955 420L925 430L895 415Z"/>
+      </g>
+      <g id="routes"></g><g id="pins"></g>
+    </svg>
+    <div class="box rv" id="cityInfo"></div>
+  </div>
+  <div class="cgal" id="cityGal"></div>
+</section>
+
+<section id="gallery">
+  <div class="sh rv"><h2>THE GALLERY</h2><p><i>Scroll sideways.</i></p></div>
+  <div class="gal" id="gal"></div>
+  <div class="galnav"><button class="btn" id="gl" aria-label="Previous">&#10094;</button><span class="galcount" id="gc"></span><button class="btn" id="gr" aria-label="Next">&#10095;</button></div>
+  <div class="trailer rv" id="trailer"></div>
+</section>
+
+<section id="playlist">
+  <div class="sh rv"><h2>THE PLAYLIST</h2><p>The songs that sound like the series.</p></div>
+  <div class="pl rv">
+    <div class="plh"><div class="cov">&#9830;</div><div><h3>The Devil's Angel</h3><p id="plCount">Series playlist</p></div></div>
+    <div id="tracks"></div>
+    <p class="hint">Tap a song to find it on Spotify.</p>
+    <div class="plbtn"><a class="btn" href="https://open.spotify.com/playlist/3BMl5N6StFpukzQbiK4u2l?si=c6a83ac39b14436a" target="_blank" rel="noopener">SPOTIFY PLAYLIST</a></div>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="sh rv"><h2>WHICH FAMILY ARE YOU?</h2><p>Five questions. No clean hands.</p></div>
+  <div class="box quiz rv" id="quizBox" aria-live="polite"></div>
+</section>
+
+<section id="characters">
+  <div class="sh rv"><h2>THE CHARACTERS</h2><p>Tap a family to filter. Chat with them in Janitor.AI.</p></div>
+  <div class="filters" id="filters"></div>
+  <div class="search"><input id="q" type="search" placeholder="Search by name, role or trait..." aria-label="Search characters" autocomplete="off"><button id="rnd" type="button">SURPRISE ME</button></div>
+  <div class="cmeta"><span id="cc"></span><span>SCROLL &#8595;</span></div>
+  <div class="cwrap" id="cw"><div id="chars" tabindex="0" aria-label="Characters list, scrollable"></div></div>
+</section>
+
+<section id="afterword">
+  <div class="aw rv" id="aw">
+    <button class="awt" id="awt" aria-expanded="false" aria-controls="awp"><span>AFTERWORD<small>A few words from the author</small></span><i>&#9660;</i></button>
+    <div class="awp" id="awp"><div class="awi"><div class="awb">
+      <div class="awh"><div class="ava" id="awAva"></div><div><h3 id="awName"></h3><span id="awRole"></span></div></div>
+      <div class="txt" id="awTxt"></div>
+      <div class="sig" id="awSig"></div>
+    </div></div></div>
+  </div>
+</section>
+
+<footer>
+  <a class="logo" href="#home">THE DEVIL'S ANGEL</a>
+  <div class="soc"><a href="https://www.wattpad.com/user/Moexran" target="_blank" rel="noopener">WATTPAD</a><a href="https://discord.gg/ttycJtNF3E" target="_blank" rel="noopener">SERVER (18+)</a><a href="https://janitorai.com/profiles/46d4fda8-565e-4384-bc2d-e5831a4397f7_profile-of-moexran" target="_blank" rel="noopener">JANITORAI</a></div>
+  <button class="btn" id="shareBtn" type="button" hidden>SHARE THE SITE</button>
+  <p>&copy; <span id="yr">2024</span> The Devil's Angel. All characters and stories belong to @Moexran. 18+ themes of crime and violence.</p>
+</footer>
+<button id="top" aria-label="Back to top">&#9650;</button>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><button id="lbx" aria-label="Close">&#10005;</button><button id="lbp" aria-label="Previous image">&#10094;</button><img id="lbi" alt=""><p id="lbc"></p><button id="lbn" aria-label="Next image">&#10095;</button></div>
+
+<script>
+/* ========= EDIT YOUR CONTENT HERE ========= */
+const CHARACTERS=[
+{name:"Cyrille Allard",role:"Head of the Allard Family. The Devil",fam:"Allard",img:"https://file.garden/ad35P9foF0kAW7I8/cyrille.jpg",tags:["FRANCE","BOSS","CALCULATING"],link:"https://janitorai.com/characters/bd420164-b000-40ca-a09a-cd57f43116d5_character-cyrille-allard",desc:"Cyrille Allard was never supposed to be the favorite son. Yet when his father entrusted him with the family empire, he became the man responsible for keeping it alive. \n\nCalculated, disciplined, and relentlessly ambitious, Cyrille has transformed the Allard syndicate into a modern criminal powerhouse. Beneath legitimate corporations and carefully maintained public appearances lies an empire built on narcotics, weapons, cybercrime, and the quiet elimination of threats before they become scandals. He does not believe in leaving problems to chance when they can be dealt with in advance. \n\nTo the outside world, Cyrille is cold, composed, and almost impossible to read. To those he considers his own, he is fiercely protective, sometimes to the point of self-destruction. His greatest contradiction is his older brother, Astin: the man who threatens everything Cyrille has built, and the one person he cannot bring himself to stop loving. \n\nCyrille knows how to command an empire. Whether he knows how to save his family—or allow himself to be loved without treating it as another responsibility—is another matter."},
+{name:"Lucas Alderidge",role:"The Silent Guardian",fam:"Allard",img:"https://file.garden/ad35P9foF0kAW7I8/lucas.jpg",tags:["FRANCE","RIGHTHANDMAN","COLD"],link:"https://janitorai.com/characters/7413d40d-6075-496d-b9bc-c0de1e4e9731_character-lucas-alderidge",desc:"Lucas Alderidge has never needed many words to make himself understood. As Cyrille Allard's head of security, most people know him as the intimidating presence standing a step behind the family patriarch. Few understand that his loyalty goes far deeper than employment. \n\nAbandoned at birth and raised on the streets, Lucas learned early that survival depended on observation, instinct, and knowing when to strike. At twelve, he attempted to pickpocket Cyrille. Rather than punish him, the young Allard recognized something in the boy and insisted that his father take him in. That single act changed the course of Lucas's life. \n\nNow, he serves as the Allards' enforcer, protector, and most trusted lieutenant. Reserved and intensely observant, he is rarely the loudest person in a room, but he is often the one who understands it best. Where Cyrille calculates the future, Lucas anticipates the danger standing just beyond it. \n\nFor a man who grew up with nothing, loyalty is not an obligation. It is a choice he continues to make."},
+{name:"Astin Allard",role:"The Fallen Heir",fam:"Allard",img:"https://file.garden/ad35P9foF0kAW7I8/astin.png",tags:["FRANCE","LOANSHARK","MANIPULATIVE"],link:"https://janitorai.com/characters/283913e3-af75-4afc-9ffc-640ae2b6bf94_character-astin-allard",desc:"Astin Allard was once the older brother every child would have wanted: protective, affectionate, and certain of his place in the world. Then came grief, resentment, and the decision that changed his family forever. \n\nWhen François named Cyrille his successor, Astin did not see a father's difficult judgment. He saw a verdict on his worth. The son who had once been a role model became a man consumed by bitterness, convinced that his birthright had been stolen by the brother who had once adored him. \n\nCunning, manipulative, and dangerously insecure, Astin has since built his own power, determined to reclaim the position he believes should have been his. He is willing to play dirty, exploit weaknesses, and turn family affection into leverage. Yet beneath the cruelty lies an old wound that ambition has never managed to close. \n\nAstin wants the throne. He wants to win. But somewhere beneath his pride is a far more vulnerable desire: to be chosen without having to fight for it, and to be loved even after someone sees what he has become."},
+{name:"Shawn 'Shaw' Sinclair",role:"Enforcer of the Allard Family",fam:"Allard",img:"https://file.garden/ad35P9foF0kAW7I8/shawn.jpg",tags:["FRANCE","ENFORCER","OBSESSIVE"],link:"https://janitorai.com/characters/45f701f2-db69-48ab-bcc7-031ac0b95c19_character-shawn-shaw-sinclair",desc:"Shaw Sinclair grew up in a world where violence was commonplace, affection was scarce, and chaos was the only thing that felt familiar. Born on the outskirts of Paris into a household defined by poverty, neglect, and brutality, he learned early that pain could be both a language and a source of control. \n\nCrime offered him more than survival. It offered stimulation, power, and a strange sense of clarity. By seventeen, Shaw had caught Cyrille Allard's attention and found himself recruited into the family as an enforcer. His intelligence and competence quickly made him valuable; his enthusiasm for violence made him infamous. \n\nBeneath his manic exterior lies a frighteningly perceptive mind. Shaw understands fear, reads weakness, and knows precisely how to turn a situation into something no one else can control. For him, violence is not merely a tool. It is entertainment, expression, and proof that he remains in command of a world that once made him powerless. \n\nShaw is not the sort of man who needs to be taught how to become dangerous. He needs only to be given a reason."},
+
+{name:"Lucio Borghese",role:"Head of the Borghese Family. The Beast",fam:"Borghese",img:"https://file.garden/ad35P9foF0kAW7I8/lucio.jpg",tags:["ITALY","BOSS","CUNNING"],link:"https://janitorai.com/characters/8d07f8d2-bc3f-45e3-add5-68bb456210aa_character-lucio-borghese",desc:"Lucio Borghese has never believed that power should be exercised quietly when it can be made unforgettable. \n\nBorn into the Borghese dynasty, Lucio grew up surrounded by wealth, violence, and the understanding that influence belonged to those clever enough to seize it. While others studied weapons and ledgers, he learned to read people, manipulate loyalties, and turn a carefully placed whisper into a catastrophe. Now the head of one of Italy's most feared criminal syndicates, he treats the European underworld as both a chessboard and a theater. \n\nFlamboyant, cunning, and viciously intelligent, Lucio thrives on spectacle. He enjoys psychological warfare as much as he enjoys winning, and he has little interest in a victory that does not leave an impression. His support for Astin Allard is not born of brotherhood or loyalty. It is an investment in the exquisite chaos that could follow. \n\nYet Lucio is not without a code. He draws a hard line at harming women and children and holds a particular contempt for human trafficking. His morality may be selective, but his boundaries are real. \n\nTo Lucio, the world is a game, people are pieces, and the most satisfying victory is the one his enemies never see coming."},
+{name:"Santana Borghese",role:"The Wildcard",fam:"Borghese",img:"https://file.garden/ad35P9foF0kAW7I8/santana.jpg",tags:["ITALY","FUTURE","IMPULSIVE"],link:"#",desc:"Santana Borghese was raised by a man who could turn a room full of criminals into an audience and a city into his playground. After the deaths of his parents, Lucio took his nephew under his wing, offering him the protection, affection, and resources that money alone could never replace. \n\nSantana repaid that devotion by becoming every bit as troublesome as his uncle. \n\nSpoiled, impulsive, and enamored with fast cars, drugs, and the thrill of getting away with things he should never have attempted, Santana has a remarkable talent for making trouble look like a good time. He possesses the confidence of someone who has rarely been told no and the recklessness of someone who assumes there will always be a way out. \n\nBut beneath the indulgence is a fiercely loyal young man who understands what it means to lose the people you love. Lucio is more than a powerful uncle to him; he is family, protector, and the person Santana most wants to emulate. \n\nHe may not yet possess Lucio's patience or mastery of manipulation, but he has inherited something equally dangerous: the willingness to do almost anything for the people he calls his own."},
+
+{name:"Mateo Montanari",role:"Head of the Montanari Family. The Master",fam:"Montanari",img:"https://file.garden/ad35P9foF0kAW7I8/mateo.jpg",tags:["ITALY","BOSS","CONTROLLED"],link:"https://janitorai.com/characters/6e5f9628-0573-46ea-9071-f8fcd4c37295_character-mateo-montanari",desc:"Mateo Montanari was born into a world where strength was expected, weakness was punished, and emotions were liabilities best kept hidden. Raised within the Montanari criminal dynasty, he learned early that survival depended on discipline and that trust, once broken, could cost far more than money. \n\nAfter a succession of internal betrayals and bloodshed, Mateo assumed control of the family and reshaped it into a tightly managed empire. Under his leadership, the Montanari operate with precision and discretion, maintaining their influence through illegal enterprises, online gambling, and casinos rather than unnecessary displays of brutality. \n\nCold, composed, and intimidatingly efficient, Mateo does not confuse authority with noise. He speaks when necessary, acts with purpose, and expects the same discipline from everyone around him. He despises cruelty without reason and has little interest in the Allard succession crisis—provided Lucio Borghese does not drag his family into it. \n\nThere is, however, one peculiar absence in Mateo's otherwise orderly life: Christmas. Once the only peaceful night in his childhood home, the holiday disappeared from his life after his mother's death. He neither celebrates it nor forbids his men from doing so, but his conspicuous indifference has inspired a certain amount of speculation among those who work for him. \n\nMateo would prefer that everyone mind their own business. \n\nUnfortunately, he employs Luca and Enzo."},
+{name:"Luca Montanari",role:"The Troublemaker",fam:"Montanari",img:"https://file.garden/ad35P9foF0kAW7I8/luca.png",tags:["ITALY","HENCHMEN","DUMBASS #1"],link:"#",desc:"Luca Montanari is living proof that loyalty and common sense are two entirely different things. \n\nTaken in by Mateo as a troubled teenager, Luca found structure, protection, and a place to belong within the Montanari family. He repaid his benefactor with unwavering devotion, an impressive willingness to throw himself into danger, and an alarming tendency to interpret simple instructions in the most complicated way possible. \n\nLoud, mischievous, and perpetually confident in his own questionable judgment, Luca approaches life with the enthusiasm of a man who has never considered the possibility that he might be wrong. He is convinced that Mateo's stern demeanor conceals a tragic loneliness and has appointed himself the unofficial architect of his boss's romantic future. \n\nMateo has not approved this appointment. Luca, naturally, considers that a minor administrative obstacle. \n\nBeneath his antics, however, is a man whose loyalty runs deep. Mateo gave him a life when he had nowhere else to go, and Luca would willingly put his own on the line in return. He may be a headache, but he is a headache that will never abandon his family."},
+{name:"Enzo Montanari",role:"The Accomplice",fam:"Montanari",img:"https://file.garden/ad35P9foF0kAW7I8/enzo.png",tags:["ITALY","HENCHMEN","DUMBASS #2"],link:"#",desc:"Enzo Montanari is the quieter half of the duo, possessing just enough self-awareness to recognize a terrible idea—and just little enough courage to stop Luca from carrying it out. \n\nLike Luca, Enzo was taken in by Mateo during his teenage years and found a home within the Montanari family. He views Mateo as a father figure, someone whose protection and guidance gave him a future he might otherwise never have had. His gratitude has grown into an almost absolute devotion, tempered only by the ever-present fear of disappointing the man he respects most. \n\nMore reserved and anxious than Luca, Enzo is occasionally the voice of reason between the two. Unfortunately, recognizing that something is a bad idea and refusing to participate are two very different skills, and Enzo has mastered neither consistently. \n\nHe follows Luca into trouble out of loyalty, tries to minimize the damage out of common sense, and spends an unreasonable amount of time worrying about the consequences. \n\nStill, beneath his nervousness lies a dependable man who can be trusted when it matters. He may not always know how to prevent disaster, but he will never leave his family to face it alone."},
+
+{name:"Vladimir Romanov",role:"Pakhan of the Romanov Family. The Monster",fam:"Romanov",img:"https://file.garden/ad35P9foF0kAW7I8/vladimir.jpg",tags:["RUSSIA","BOSS","RUTHLESS"],link:"https://janitorai.com/characters/f16b2f1d-5585-4617-8d1a-90ef75f7c8e2_character-vladimir-romanov",desc:"Few people can claim to understand Vladimir Romanov. Fewer still would admit to wanting to try. \n\nKnown throughout the Russian underworld as Monstr Severa—the Monster of the North—Vladimir commands a criminal empire whose origins remain obscured by secrecy and whose reach inspires fear well beyond Moscow. Weapons, narcotics, and human trafficking form part of the family's operations, but the full extent of its influence is known only to those permitted to survive close enough to witness it. \n\nVladimir is not a man who needs spectacle to establish dominance. He favors silence over threats, precision over recklessness, and decisions made with the cold certainty of someone who has already considered every possible outcome. His violence is deliberate, his patience unsettling, and his word final. \n\nDespite maintaining a public position of neutrality in the Allard succession crisis, Vladimir has quietly aligned himself with Cyrille, whom he considers the more capable and stable heir. His relationship with the French family is unusual by Romanov standards, though the nature of that connection remains difficult to decipher. \n\nRumors about Vladimir's past are plentiful. Vladimir neither confirms nor denies them. \n\nPerhaps the most frightening thing about the Monster of the North is that he has never felt compelled to explain himself."},
+{name:"Dmitri Korchenkov",role:"The Unbothered Menace",fam:"Romanov",img:"https://file.garden/ad35P9foF0kAW7I8/dmitri.png",tags:["RUSSIA","ENFORCER","OBSERVANT"],link:"https://janitorai.com/characters/951a9af1-092d-452f-8078-e4c1a8778881_character-dmitri-korchenkov",desc:"Dmitri Korchenkov is the man Vladimir Romanov trusts with the jobs that cannot be entrusted to anyone else. Powerful, capable, and ruthlessly efficient, he is the Russian pakhan's second-in-command and the person responsible for ensuring that even the most delicate operations are carried out without unnecessary complications. \n\nHe is also, rather inconveniently, incapable of doing almost anything in silence. \n\nDmitri grew up in Moscow's harsher districts, where survival depended on adaptability and a quick understanding of the people around him. Humor became his defense mechanism, his method of easing tension, and occasionally his way of irritating everyone within earshot. He can handle a dangerous assignment with impeccable professionalism while simultaneously complaining about the weather, criticizing the plan, or narrating his own actions as though he were performing for an audience.  \n\nHis relationship with Vladimir is one of the few mysteries within the Romanov inner circle. They met under circumstances that remain unclear, but Dmitri earned his position through more than physical strength. He understands his boss in ways few others can, reading the silences and subtle shifts that everyone else mistakes for indifference. \n\nUnlike most people in Vladimir's orbit, Dmitri does not appear to fear him. He knows exactly how dangerous Vladimir is. He simply has the questionable confidence to keep talking anyway."},
+{name:"Nikolai 'Niko' Romanov",role:"The Devil in Disguise",fam:"Romanov",img:"https://file.garden/ad35P9foF0kAW7I8/Niko.jpg",tags:["RUSSIA","FUTURE","ANGEL FACED"],link:"#",desc:"To the world, Nikolai Romanov is everything a young man ought to be: charming, affectionate, polite, and almost disarmingly sweet. More expressive than his famously stoic uncle, Vladimir Romanov, Niko possesses an easy warmth that makes him approachable even among people who would otherwise think twice before associating with the Romanov name. He smiles readily, speaks kindly, and carries himself with an innocence that seems almost out of place in a family built on fear. \n\nIt is a convincing performance. \n\nBeneath his angelic exterior lies a deeply sadistic nature, one concealed behind practiced sweetness and an unsettling understanding of how easily people mistake kindness for goodness. Niko knows precisely how to make himself likable, how to earn someone's trust, and how to keep his darker impulses hidden until the consequences are already irreversible. \n\nHis uncle knows exactly what he is. Vladimir has never been fooled by the sweet smiles or the carefully cultivated innocence. He recognizes the darkness beneath Niko's charm and, rather than confronting it, quietly ensures that the consequences of his nephew's actions do not become public spectacles. Where others might see a monster in the making, Vladimir sees a Romanov—and Romanovs have a habit of keeping their problems within the family. \n\nAfter all, the most dangerous monsters are not always the ones lurking in the dark. Sometimes, they are the ones everyone insists are angels."},
+
+{name:"Edward Winata",role:"Head of the Winata Family. The Politician",fam:"Winata",img:"https://file.garden/ad35P9foF0kAW7I8/edward.jpg",tags:["INDONESIA","POLITICIAN","SCHEMING"],link:"https://janitorai.com/characters/c752e7d9-dfbd-46de-aaed-63741a493998_character-edward-winata-the-corrupt-politician",desc:"Edward Winata has mastered the art of being exactly the man the public wants him to be. \n\nBorn into a wealthy, multigenerational Indonesian-American family, Edward was raised in an environment where money, influence, and authority were treated not as achievements but as inheritances. He learned early that success belonged to those who understood the rules—and that the greatest advantage was knowing who had the power to change them. \n\nHe first took control of the family business empire, expanding its reach with ruthless efficiency, before turning toward politics. Public office offered something money alone could not guarantee: legitimacy, institutional influence, and a platform from which to make his ambitions almost impossible to challenge. \n\nTo the public, Edward is charismatic, articulate, progressive, and philanthropic. He is the sort of politician people want to believe in, a symbol of modern success who appears to understand the aspirations of ordinary citizens. Behind closed doors, however, he is calculating, corrupt, and deeply convinced of his own untouchability. \n\nEdward rarely needs to issue an explicit threat. He can disguise intimidation as mentorship, leverage as generosity, and manipulation as an opportunity. He understands that people are easier to control when they believe they owe him something—and that the most effective cage is one its prisoner mistakes for a privilege. \n\nTo Edward, corruption is not a moral failing. It is simply the cost of getting things done. \n\nAnd in a world where influence can determine which laws are enforced, which scandals disappear, and which enemies are silenced, he has little reason to believe that anyone will ever make him pay for it."},
+
+{name:"William Moore",role:"Corrupt Solicitor. The Opportunist",fam:"London",img:"https://file.garden/ad35P9foF0kAW7I8/william.jpg",tags:["UK","LAWYER","CORRUPT"],link:"https://janitorai.com/characters/42bb4fce-bff2-46fe-bf30-fab033f11903_character-william-moore",desc:"William Moore has never confused morality with professionalism. A high-profile lawyer whose clientele includes mafia bosses, politicians, and corporate criminals, he has built his career on making inconvenient truths disappear beneath impeccable legal arguments. \n\nCharming, articulate, and perpetually polished, William knows how to make himself indispensable to people who cannot afford to have their secrets exposed. He understands the law well enough to exploit its weaknesses and human nature well enough to know when someone is willing to pay to avoid the consequences of their own actions. \n\nBut beneath the sophistication lies a deeply envious and opportunistic man. William grew up in a household where he and his younger sister, Evelyn, were constantly pitted against one another by their parents. What might have been ordinary sibling rivalry became a lasting resentment, leaving him with an insatiable need to prove that he is the more deserving, more successful, and ultimately more important child. \n\nThat insecurity follows him into adulthood. He despises being overlooked, resents anyone who receives recognition he believes belongs to him, and will betray even his closest allies if doing so brings him nearer to power. \n\nTo William, loyalty is a liability and morality is a luxury. \n\nHe does not need to own an empire. He only needs to make sure its owners cannot function without him."}, 
+{name:"Arthur Phillips",role:"S.A.S. Bodyguard. The Soldier",fam:"London",img:"https://file.garden/ad35P9foF0kAW7I8/arthur.jpg",tags:["UK","BODYGUARD","PROTECTIVE"],link:"https://janitorai.com/characters/eba1f797-c048-400e-8e02-dea5a6fcdef5_character-arthur-phillips",desc:"Arthur Phillips has spent most of his life preparing to protect people. He simply never imagined that his most exhausting assignment would involve protecting them from themselves. \n\nBorn into a military family, Arthur grew up idolizing heroes and dreaming of becoming one. Following in the footsteps of his father and older brother, he enlisted in the British Army at 16 with parental consent. His discipline, commitment, and exceptional aptitude earned him a place in the Special Air Service by twenty, where he went on to distinguish himself through his performance in demanding missions. \n\nFor years, Arthur thrived in the world he had chosen. He was capable, dependable, and exceptionally good at his job. Danger was something to assess, prepare for, and overcome—not something to complain about. \n\nThen came an assignment guarding a prominent political family. \n\nNow, the former operative finds himself navigating a very different kind of battlefield, one where routine is constantly disrupted, common sense appears to be optional, and keeping people alive sometimes requires more patience than tactical skill. He remains disciplined, vigilant, and fiercely protective, even when the people under his care make him question every career decision that brought him here. \n\nBeneath the grumpy exterior is the same boy who once dreamed of being a hero: a man who genuinely believes that protecting others is worth the trouble, even when the trouble is exceptionally good at finding him. \n\nArthur can handle hostile territory, impossible odds, and the threat of death. \n\nWhat he has yet to master is the art of babysitting without developing a headache."},
+];
+
+const CITIES=[
+{n:"Paris",c:"FRANCE",x:360,y:250,d:"<b>The Devil's Domain.</b> Paris is a city that has mastered the art of seduction. Its golden boulevards, grand architecture, haute couture houses, and candlelit restaurants make it a symbol of beauty, romance, and refinement. Here, everything appears touched by elegance, and even the darkest secrets wear the finest suits.\n\nBut beneath the city's enchanting facade lies an empire built on blood, money, and absolute discretion. The Allard family has woven itself into the very fabric of Parisian society, concealing its criminal dominion behind legitimate businesses and an untouchable reputation. And at its center stands a man whose name commands both reverence and fear.\n\n<b><i>In Paris, the devil does not need to hide. He only needs to look respectable.</i></b>"},
+{n:"Milan",c:"ITALY",x:432,y:296,d:"<b>The Beast's Kingdom.</b> Milan is a city of ambition, where fashion dictates influence, fortunes change hands behind closed doors, and power is measured in more than money. Beneath its immaculate storefronts and glittering skyline thrives a world where loyalty is expensive, betrayal is inevitable, and weakness is an invitation to be devoured.\n\nThe Borghese family has made this city its hunting ground. Ruthless, cunning, and unashamed of its brutality, the family rules through intimidation, illicit trade, and a willingness to cross lines others would never dare approach. In Milan, cruelty is a weapon, wealth is leverage, and mercy is a privilege reserved for those deemed worthy of it.\n\n<b><i>The beast does not ask for permission. It takes what it wants.</i></b>"},
+{n:"Moscow",c:"RUSSIA",x:690,y:150,d:"<b>The Monster's Playground.</b> Moscow is a city of contradictions: imperial grandeur and Soviet ghosts, glittering wealth and unforgiving winters, monumental architecture and streets that have witnessed the rise and fall of empires. Power here is rarely gentle. It is inherited, seized, defended, and paid for in blood.\n\nThe Romanov family operates in the spaces where fear becomes obedience. Its reach extends through weapons, narcotics, and human trafficking, while its true influence remains obscured by layers of secrecy. Few know the full extent of its empire, and fewer still are foolish enough to investigate. Vladimir Romanov, the family's pakhan, is a man surrounded by rumors and unanswered questions. Even among monsters, he is an unsettling presence.\n\n<b><i>In Moscow, people fear what they can see. The wise fear what they cannot.</i></b>"},
+{n:"Sicily",c:"ITALY",x:470,y:430,d:"<b>The Master's Territory.</b> Sicily is a land shaped by old blood and older traditions. Sun-drenched coastlines, ancient stone streets, family estates, and quiet Mediterranean villages conceal a history in which loyalty is sacred and power is rarely displayed without purpose. Here, the past never truly dies. It simply learns to wait.\n\nThe Montanari family understands this better than most. Its empire thrives away from the public eye, sustained by discreet enterprises, underground gambling, and casinos where fortunes are won and lost beneath carefully controlled smiles. Under Mateo Montanari, order takes precedence over spectacle, and every move is deliberate. He has little interest in other families' wars—but neutrality should never be mistaken for weakness.\n\n<b><i>The master does not need to raise his voice when the entire room already knows to listen.</i></b>"},
+{n:"Jakarta",c:"INDONESIA",x:872,y:450,d:"<b>The Politician's Empire.</b> Jakarta never sleeps. Beneath its towering skyscrapers, bustling streets, and glittering corporate districts, ambition moves at a relentless pace. Deals are struck over expensive dinners, fortunes are built in boardrooms, and influence travels through corridors most people will never enter. Here, power does not always carry a weapon. Sometimes, it carries a briefcase and a government title.\n\nThe Winata family has perfected the art of respectable corruption. Celebrated as a dynasty of successful entrepreneurs and influential public figures, they have cultivated an immaculate reputation while quietly entrenching themselves in the machinery of government. Their influence reaches far beyond business, blurring the line between political authority and private empire. And when an entire system has been bent to serve you, who is left to hold you accountable?\n\n<b><i>In Jakarta, the most dangerous man in the room might be the one everyone voted for.</i></b>"},
+{n:"London",c:"UNITED KINGDOM",x:336,y:204,d:"<b>The City of Shadows.</b> London is a city of polished institutions, ancient traditions, and carefully maintained appearances. Behind the imposing courthouses, exclusive private clubs, and halls of political power, influence changes hands with a handshake and a signature. The law promises order, the government promises stability, and the city's elite promise that everything is under control.\n\nBut London belongs to no single criminal dynasty. Its underworld is a shifting network of mercenaries, compromised officials, powerful patrons, and men who have learned to profit from the sins of others. Here, a corrupt lawyer can make a monster untouchable, while a former soldier can become the last line of defense between a powerful family and its enemies. In a city where everyone has something to conceal, allegiance is rarely permanent.\n\n<b><i>Some people live in the light. Others decide what the light is allowed to reveal.</i></b>"}
+];
+
+// ---- CITY GALLERIES: add/remove images here. Leave img:"" for a placeholder. ----
+const CITY_GALLERY={
+ Paris:[{t:"Eiffel Tower",img:"https://file.garden/ad35P9foF0kAW7I8/paris.jpg"},{t:"Allard Manor",img:"https://file.garden/ad35P9foF0kAW7I8/allardmans.jpg"},{t:"Allard Enterprise",img:"https://file.garden/ad35P9foF0kAW7I8/allardbuild.jpg"},{t:"Eden Flowershop",img:"https://file.garden/ad35P9foF0kAW7I8/edenflwrshp.jpg"}],
+ Milan:[{t:"Duomo di Milano",img:"https://file.garden/ad35P9foF0kAW7I8/milan.jpg"},{t:"Borghese Palazzo",img:"https://file.garden/ad35P9foF0kAW7I8/milanplz.jpg"},{t:"Borghese Base",img:"https://file.garden/ad35P9foF0kAW7I8/milanbase.jpg"}],
+ Moscow:[{t:"Red Square",img:"https://file.garden/ad35P9foF0kAW7I8/moskau.jpg"},{t:"Romanov Dacha",img:"https://file.garden/ad35P9foF0kAW7I8/rmnvdacha.jpg"},{t:"Romanov Base",img:"https://file.garden/ad35P9foF0kAW7I8/rmnvbase.jpg"}],
+ Sicily:[{t:"Sicilian Coastline",img:"https://file.garden/ad35P9foF0kAW7I8/sicily.jpg"},{t:"Montanari Estate",img:"https://file.garden/ad35P9foF0kAW7I8/sclmans.jpg"},{t:"Montanari Docks",img:"https://file.garden/ad35P9foF0kAW7I8/scldocks.jpg"}],
+ Jakarta:[{t:"Hotel Indonesia Roundabout",img:"https://file.garden/ad35P9foF0kAW7I8/jakarta.jpg"},{t:"Winata Mansion",img:"https://file.garden/ad35P9foF0kAW7I8/winatamans.jpg"},{t:"Winata Building",img:"https://file.garden/ad35P9foF0kAW7I8/winatabuild.jpg"}],
+ London:[{t:"Big Ben",img:"https://file.garden/ad35P9foF0kAW7I8/london.jpg"},{t:"Moore Law Office",img:"https://file.garden/ad35P9foF0kAW7I8/moorefirm.jpg"},{t:"Phillips's Apartment",img:"https://file.garden/ad35P9foF0kAW7I8/arthapart.jpg"}]
+};
+// ---- TRAILER: paste your .mp4 link between the quotes. Leave empty and the trailer block is hidden. ----
+const TRAILER_URL="";
+const TRAILER_POSTER="";
+const NOVEL_COVER="https://file.garden/ad35P9foF0kAW7I8/TheDevilsAngel.jpg"; // link for the book cover here
+const GALLERY=[
+{t:"Lucas Alderidge, Cyrille Allard, Shawn Sinclair",img:"https://file.garden/ad35P9foF0kAW7I8/trio-allard.jpg"},{t:"William Moore, Astin Allard",img:"https://file.garden/ad35P9foF0kAW7I8/wilast.jpg"},{t:"Lucio & Santana Borghese",img:"https://file.garden/ad35P9foF0kAW7I8/lucsan.jpg"},{t:"Vladimir Romanov, Dmitri Korchenkov",img:"https://file.garden/ad35P9foF0kAW7I8/vladim.jpg"},{t:"The Montanaris",img:"https://file.garden/ad35P9foF0kAW7I8/montanaris.jpg"},{t:"Edward Winata",img:"https://file.garden/ad35P9foF0kAW7I8/winatapic.jpg"},{t:"Arthur Phillips",img:"https://file.garden/ad35P9foF0kAW7I8/arthurpic.jpg"}
+];
+const TRACKS=[
+{t:"Me and the Devil",a:"Soap&Skin",d:"3:05"},{t:"RUNRUNRUN",a:"Dutch Melrose",d:"2:20"},
+{t:"if u think i'm pretty",a:"Artemas",d:"2:08"},{t:"Million Dollar Man",a:"Lana Del Rey",d:"3:41"},
+{t:"Old Money",a:"Lana del Rey",d:"4:31"},{t:"LET THE WORLD BURN",a:"Chris Grey",d:"2:43"}
+];
+
+// ---- AFTERWORD ----
+const AW_NAME="Moexran";
+const AW_ROLE="Author of The Devil's Angel";
+const AW_IMG="https://file.garden/ad35P9foF0kAW7I8/moeava";
+const AW_TEXT=[
+"Hi, I'm <b>Moexran</b>! Also known as Moe, Moemoe, or that weird, pervy pee princess- ANYWAYS!",
+"The Devil's Angel is a very personal and special series to me, for more than one reason. It started as a novel I wrote in 2024. I was in a very lonely and dark place mentally, and one day, I decided I wanted to at least leave a proof of my existence. And, after almost a year, I finished the novel and even applied it for the Wattys!",
+"Another reason why this series is special... Is because it was the reason I started making AI RP bots. It was around that time that I got introduced to AI RP, and was HOOKED. I joined communities, and decided that <i>'why not?'</i> Hence how I made my very first bot, Cyrille!",
+"As the series continues to grow, the characters too. And I decided to widen the series's universe, adding even more factions from the original 3 families, and 6 main characters. And I love each and every one of them.",
+"I can never thank you enough for following my journey with this. Thank you so much for reading my writing and/or using my bots! I hope you enjoyed talking with them as much as I loved making them. I love you so much."
+];
+const AW_SIGN="— Moexran";
+/* ========================================== */
+const $=s=>document.querySelector(s);
+// turns a description into <p> paragraphs. Accepts: an array ["para 1","para 2"],
+// a string with a blank line between paragraphs ("one\n\ntwo"), or a string that already contains <p> tags.
+const P=d=>{if(Array.isArray(d))return d.map(x=>`<p>${x}</p>`).join("");
+ d=String(d).trim();if(/<p[\s>]/i.test(d))return d;
+ return d.split(/\n\s*\n/).map(x=>`<p>${x.trim()}</p>`).join("")};
+const FC={Allard:"#e0252f",Borghese:"#3fae7a",Montanari:"#4f8fd8",Romanov:"#9fc7e8",Winata:"#e08a3a",London:"#a8a8b8"}; // family accent colours
+document.body.classList.add("js");
+// scroll reveal
+const rvIO="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");rvIO.unobserve(e.target)}}),{threshold:.08,rootMargin:"0px 0px -6% 0px"}):null;
+// long text: fade hint while scrolling + READ MORE button when it overflows
+const fade=el=>{const open=el.classList.contains("open"),ov=el.scrollHeight>el.clientHeight+4;
+ el.classList.toggle("more",ov&&el.scrollTop+el.clientHeight<el.scrollHeight-4);
+ const x=el.nextElementSibling;if(x&&x.classList.contains("xp"))x.hidden=!(ov||open)};
+// run after anything is (re)rendered
+function post(){
+ document.querySelectorAll(".rv:not(.in)").forEach(el=>rvIO?rvIO.observe(el):el.classList.add("in"));
+ document.querySelectorAll(".scroll").forEach(el=>{
+  if(!(el.nextElementSibling&&el.nextElementSibling.classList.contains("xp"))){
+   const b=document.createElement("button");b.type="button";b.className="xp";b.hidden=true;b.setAttribute("aria-expanded","false");b.textContent="READ MORE \u25BC";el.after(b)}
+  fade(el)})}
+// share (native share sheet on phones, copy-link fallback elsewhere)
+const canShare=!!(navigator.share||(navigator.clipboard&&navigator.clipboard.writeText));
+async function shareIt(text,btn){const url=location.href.split("#")[0];
+ try{if(navigator.share){await navigator.share({title:document.title,text,url});return}
+  await navigator.clipboard.writeText(text+" "+url);
+  if(btn){const o=btn.textContent;btn.textContent="LINK COPIED";setTimeout(()=>btn.textContent=o,1800)}}catch(e){}}
+const FB=(t,l)=>`<div class="fb">${l}<small>${t}</small></div>`;
+const IMG=(src,alt)=>`<img src="${String(src).trim()}" alt="${alt}" loading="lazy" decoding="async" onload="this.parentNode.querySelector('.fb').style.display='none'" onerror="this.remove()">`;
+const pic=(img,t)=>`<div class="pic">${FB("PHOTO HERE",t.split(" ").map(w=>w[0]).join(""))}${img?IMG(img,t):""}</div>`;
+
+// characters + filters
+const FAMILIES=["Allard","Borghese","Montanari","Romanov","Winata","London"];
+const fams=["All",...new Set([...FAMILIES,...CHARACTERS.map(c=>c.fam)])];
+const cnt=f=>f=="All"?CHARACTERS.length:CHARACTERS.filter(c=>c.fam==f).length;
+$("#filters").innerHTML=fams.map((f,i)=>`<button class="${i?"":"on"}" data-f="${f}"${FC[f]?` style="--fc:${FC[f]}"`:""}>${f.toUpperCase()}<em>${cnt(f)}</em></button>`).join("");
+let curF="All",curQ="";
+let FAV=[];try{FAV=JSON.parse(localStorage.getItem("tda-fav")||"[]")}catch(e){}
+const saveFav=()=>{try{localStorage.setItem("tda-fav",JSON.stringify(FAV))}catch(e){}};
+$("#filters").insertAdjacentHTML("beforeend",`<button data-f="__fav">&#9733; FAVORITES<em id="fc">${FAV.length}</em></button>`);
+function drawChars(f,q=""){
+ const k=q.trim().toLowerCase();
+ const list=CHARACTERS.filter(c=>(f=="All"||(f=="__fav"?FAV.includes(c.name):c.fam==f))&&(!k||[c.name,c.role,c.fam,...c.tags].join(" ").toLowerCase().includes(k)));
+ if(!list.length){$("#chars").innerHTML=`<p class="warn" style="text-align:center">${k?"No characters match that search.":(f=="__fav"?"Tap the heart on a character to save them here.":"The "+f+" family's characters are coming soon.")}</p>`;$("#cc").textContent="0 CHARACTERS";return}
+ $("#chars").innerHTML=list.map(c=>`
+ <article class="card ch rv" data-n="${c.name}" style="--fc:${FC[c.fam]||"var(--gold)"}"><button class="fav" type="button" aria-pressed="${FAV.includes(c.name)}" aria-label="Save ${c.name} to favorites">${FAV.includes(c.name)?"\u2665":"\u2661"}</button>${pic(c.img,c.name)}<div class="info"><h3>${c.name}</h3><div class="role">${c.role}</div>
+ <div class="tags">${c.tags.map((t,i)=>`<span class="tag ${i%3==2?"r":""}">${t}</span>`).join("")}</div>
+ <div class="scroll">${P(c.desc)}</div>${c.link&&c.link!="#"?`<a class="btn" href="${c.link}" target="_blank" rel="noopener">CHAT WITH ${c.name.split(" ")[0].toUpperCase()}</a>`:`<span class="btn off" aria-disabled="true">COMING SOON</span>`}</div></article>`).join("");
+ $("#cc").textContent=list.length+(list.length==1?" CHARACTER":" CHARACTERS");$("#chars").scrollTop=0;post();cend();
+}
+const cend=()=>{const c=$("#chars");$("#cw").classList.toggle("end",c.scrollTop+c.clientHeight>=c.scrollHeight-6)};
+$("#chars").addEventListener("scroll",cend,{passive:true});addEventListener("resize",cend);
+drawChars("All");
+$("#filters").onclick=e=>{const b=e.target.closest("button");if(!b)return;
+ document.querySelectorAll("#filters button").forEach(x=>x.classList.toggle("on",x==b));curF=b.dataset.f;drawChars(curF,curQ)};
+$("#chars").addEventListener("click",e=>{const b=e.target.closest(".fav");if(!b)return;
+ const n=b.closest(".card").dataset.n,on=!FAV.includes(n);FAV=on?[...FAV,n]:FAV.filter(x=>x!=n);saveFav();
+ b.setAttribute("aria-pressed",on);b.textContent=on?"\u2665":"\u2661";$("#fc").textContent=FAV.length;
+ if(!on&&curF=="__fav")drawChars(curF,curQ)});
+function jump(name){const c=$("#chars"),el=[...c.children].find(x=>x.dataset&&x.dataset.n==name);if(!el)return;
+ el.classList.add("in");c.scrollTo({top:el.offsetTop-12,behavior:"smooth"});el.classList.add("hl");setTimeout(()=>el.classList.remove("hl"),2200)}
+$("#rnd").onclick=()=>{const l=[...$("#chars").querySelectorAll(".card")];if(!l.length)return;jump(l[Math.floor(Math.random()*l.length)].dataset.n)};
+// stats strip (counts come from your data, so they update themselves)
+(()=>{const S=[["FAMILIES",new Set(CHARACTERS.map(c=>c.fam)).size],["CHARACTERS",CHARACTERS.length],["CITIES",CITIES.length],["SONGS",TRACKS.length]];
+ const el=$("#stats");el.innerHTML=S.map(x=>`<div><b data-n="${x[1]}">0</b><span>${x[0]}</span></div>`).join("");
+ const run=()=>el.querySelectorAll("b").forEach(b=>{const n=+b.dataset.n;if(matchMedia("(prefers-reduced-motion:reduce)").matches){b.textContent=n;return}
+  let t0=null;const st=t=>{t0=t0||t;const p=Math.min((t-t0)/1100,1);b.textContent=Math.round(n*p);if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)});
+ if("IntersectionObserver" in window){const o=new IntersectionObserver(e=>{if(e[0].isIntersecting){run();o.disconnect()}});o.observe(el)}else run();
+ // spotlight: one character per day
+ const d=Math.floor(Date.now()/864e5),c=CHARACTERS[d%CHARACTERS.length],sp=$("#spot");
+ sp.hidden=false;sp.style.setProperty("--fc",FC[c.fam]||"var(--gold)");
+ sp.innerHTML=`<div class="ava"><span class="fb">${c.name[0]}</span>${c.img?IMG(c.img,c.name):""}</div><div><small>TODAY'S SPOTLIGHT</small><h3>${c.name}</h3><em>${c.role}</em></div><i>&#10095;</i>`;
+ sp.onclick=()=>{const b=document.querySelector('#filters button[data-f="All"]');if(b)b.click();$("#q").value="";curQ="";drawChars("All");$("#characters").scrollIntoView({behavior:"smooth"});setTimeout(()=>jump(c.name),500)}})();
+$("#q").oninput=e=>{curQ=e.target.value;drawChars(curF,curQ)};
+
+// map
+$("#routes").innerHTML=CITIES.slice(1).map(c=>`<path class="route" d="M${CITIES[0].x} ${CITIES[0].y}Q${(CITIES[0].x+c.x)/2} ${Math.min(CITIES[0].y,c.y)-50} ${c.x} ${c.y}"/>`).join("");
+$("#pins").innerHTML=CITIES.map((c,i)=>`<g class="pin" tabindex="0" role="button" aria-label="${c.n}" data-i="${i}"><circle class="h" cx="${c.x}" cy="${c.y}" r="24"/><circle class="p" cx="${c.x}" cy="${c.y}" r="6"/><circle class="c" cx="${c.x}" cy="${c.y}" r="7"/>${c.x>800?`<text class="b" x="${c.x}" y="${c.y+5}" dy="1.5em">${c.n}</text>`:`<text x="${c.x+14}" y="${c.y+5}">${c.n}</text>`}</g>`).join("");
+let curCity=0;
+function city(i){const c=CITIES[i];
+ document.querySelectorAll(".pin").forEach((p,j)=>p.classList.toggle("on",i==j));
+ $("#cityInfo").innerHTML=`<h3>${c.n}</h3><div class="c2">${c.c}</div><div class="scroll">${P(c.d)}</div><div class="cnav"><button data-d="-1" aria-label="Previous city">&#10094; ${CITIES[(i+CITIES.length-1)%CITIES.length].n.toUpperCase()}</button><span>${i+1} / ${CITIES.length}</span><button data-d="1" aria-label="Next city">${CITIES[(i+1)%CITIES.length].n.toUpperCase()} &#10095;</button></div>`;
+ curCity=i;
+ const g=CITY_GALLERY[c.n]||[];
+ $("#cityGal").innerHTML=g.length?`<h4>${c.n.toUpperCase()} GALLERY</h4><div class="row">${g.map(x=>`<figure><div class="ph"><span class="fb">IMAGE HERE</span>${x.img?IMG(x.img,x.t):""}</div><figcaption>${x.t}</figcaption></figure>`).join("")}</div>`:"";
+ post()}
+document.querySelectorAll(".pin").forEach(p=>{p.onclick=()=>{city(p.dataset.i);const r=$("#cityInfo").getBoundingClientRect();if(r.top>innerHeight-120||r.bottom<80)$("#cityInfo").scrollIntoView({behavior:"smooth",block:"center"})};p.onkeydown=e=>{if(e.key=="Enter"||e.key==" "){e.preventDefault();city(p.dataset.i)}}});
+$("#cityInfo").onclick=e=>{const b=e.target.closest("[data-d]");if(!b)return;
+ city((curCity+ +b.dataset.d+CITIES.length)%CITIES.length)};
+city(0);
+
+$("#cover").innerHTML=FB("COVER HERE","TDA")+(NOVEL_COVER?IMG(NOVEL_COVER,"The Devil's Angel cover"):"");
+// gallery
+$("#gal").innerHTML=GALLERY.map(g=>`<figure><div class="ph"><span class="fb">IMAGE HERE</span>${g.img?IMG(g.img,g.t):""}</div><figcaption>${g.t}</figcaption></figure>`).join("");
+const gal=$("#gal");
+const gcount=()=>{const f=[...gal.children];if(!f.length)return;const c=gal.scrollLeft+gal.clientWidth/2;let n=0;f.forEach((x,i)=>{if(x.offsetLeft<=c)n=i});
+ if(gal.scrollLeft+gal.clientWidth>=gal.scrollWidth-4)n=f.length-1;$("#gc").textContent=(n+1)+" / "+f.length};
+gal.addEventListener("scroll",gcount,{passive:true});addEventListener("resize",gcount);gcount();
+$("#gl").onclick=()=>$("#gal").scrollBy({left:-340,behavior:"smooth"});
+$("#gr").onclick=()=>$("#gal").scrollBy({left:340,behavior:"smooth"});
+
+// trailer (only if a link is set)
+(()=>{const t=$("#trailer");if(!TRAILER_URL){t.remove();return}
+ t.innerHTML=`<h3>WATCH THE TRAILER</h3><video controls playsinline preload="metadata"${TRAILER_POSTER?` poster="${TRAILER_POSTER}"`:""}><source src="${TRAILER_URL}" type="video/mp4">Your browser doesn't support video playback.</video>`})();
+
+// playlist
+$("#tracks").innerHTML=TRACKS.map((t,i)=>`<a class="trk" href="https://open.spotify.com/search/${encodeURIComponent(t.t+" "+t.a)}" target="_blank" rel="noopener"><i>${i+1}</i><div><b>${t.t}</b><span>${t.a}</span></div><i>${t.d}</i></a>`).join("");
+$("#plCount").textContent="Series playlist \u2022 "+TRACKS.length+" songs";
+
+// nav
+const nav=$("#nav");const bg=$("#burger");
+bg.onclick=()=>bg.setAttribute("aria-expanded",nav.classList.toggle("open"));
+nav.onclick=e=>{if(e.target.tagName=="A"){nav.classList.remove("open");bg.setAttribute("aria-expanded","false")}};
+const closeNav=()=>{nav.classList.remove("open");bg.setAttribute("aria-expanded","false")};
+document.addEventListener("click",e=>{if(nav.classList.contains("open")&&!e.target.closest("header"))closeNav()});
+addEventListener("keydown",e=>{if(e.key=="Escape")closeNav()});
+const links=[...nav.querySelectorAll("a")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("#home,section").forEach(s=>io.observe(s));
+addEventListener("scroll",()=>{const h=document.documentElement;
+ $("#prog").style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+"%";$("#top").classList.toggle("show",scrollY>600)});
+$("#top").onclick=()=>scrollTo({top:0,behavior:"smooth"});
+
+// embers
+(()=>{const cv=$("#embers"),x=cv.getContext("2d");let W,H,E=[],raf,inView=true;
+ const rs=()=>{W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight};rs();addEventListener("resize",rs);
+ const mk=fill=>({x:Math.random()*W,y:fill?Math.random()*H:H+10,r:Math.random()*2.2+.5,v:Math.random()*.9+.3,s:Math.random()*2,g:Math.random()<.5});
+ const N=innerWidth<600?35:70;for(let i=0;i<N;i++)E.push(mk(true));
+ if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+ function f(){x.clearRect(0,0,W,H);E.forEach((p,i)=>{p.y-=p.v;p.x+=Math.sin(p.y/40+p.s)*.4;
+  if(p.y<-10)E[i]=mk(false);x.beginPath();x.arc(p.x,p.y,p.r,0,7);
+  x.fillStyle=p.g?"rgba(243,217,139,.8)":"rgba(224,37,47,.8)";x.shadowBlur=10;x.shadowColor=p.g?"#d4a84b":"#e0252f";x.fill()});
+  raf=requestAnimationFrame(f)}
+ const run=()=>{cancelAnimationFrame(raf);if(inView&&!document.hidden)raf=requestAnimationFrame(f)};
+ new IntersectionObserver(e=>{inView=e[0].isIntersecting;run()}).observe(cv);
+ document.addEventListener("visibilitychange",run);run();
+})();
+
+
+// ---- fit map: auto-centers everything (land + pins + labels) with even padding ----
+function fitMap(){const s=$("svg.map");if(!s||!s.getClientRects().length)return;
+ const els=[s.querySelector(".land"),...s.querySelectorAll(".pin text"),...s.querySelectorAll(".pin circle.c")];
+ let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+ els.forEach(e=>{const b=e.getBBox();x0=Math.min(x0,b.x);y0=Math.min(y0,b.y);x1=Math.max(x1,b.x+b.width);y1=Math.max(y1,b.y+b.height)});
+ const pad=46;s.setAttribute("viewBox",`${x0-pad} ${y0-pad} ${x1-x0+2*pad} ${y1-y0+2*pad}`)}
+fitMap();addEventListener("resize",fitMap);addEventListener("load",fitMap);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitMap);
+
+// ---- afterword dropdown ----
+(()=>{const aw=$("#aw"),btn=$("#awt");
+ $("#awName").textContent=AW_NAME;$("#awRole").textContent=AW_ROLE;$("#awSig").textContent=AW_SIGN;
+ $("#awTxt").innerHTML=AW_TEXT.map(t=>`<p>${t}</p>`).join("");
+ $("#awAva").innerHTML=`<span class="fb">${(AW_NAME[0]||"M").toUpperCase()}</span>`+(AW_IMG?IMG(AW_IMG,AW_NAME):"");
+ const set=o=>{aw.classList.toggle("open",o);btn.setAttribute("aria-expanded",o)};
+ window.openAW=()=>{if(!aw.classList.contains("open")){set(true);setTimeout(()=>aw.scrollIntoView({behavior:"smooth",block:"nearest"}),480)}};
+ btn.onclick=()=>{const o=!aw.classList.contains("open");set(o);if(o)setTimeout(()=>aw.scrollIntoView({behavior:"smooth",block:"nearest"}),480)};
+ document.addEventListener("click",e=>{const a=e.target.closest('a[href="#afterword"]');if(a)setTimeout(openAW,350)});
+ if(location.hash=="#afterword")setTimeout(openAW,300);
+})();
+
+// ---- lightbox (tap any picture to enlarge; swipe or use arrows to browse the same gallery) ----
+(()=>{const lb=$("#lb"),im=$("#lbi"),cp=$("#lbc");let set=[],k=0,tx=null;
+ const show=()=>{const i=set[k],f=i.closest("figure"),fc=f&&f.querySelector("figcaption");
+  im.src=i.currentSrc||i.src;im.alt=i.alt;
+  cp.textContent=(fc?fc.textContent:i.alt)+(set.length>1?"  ("+(k+1)+"/"+set.length+")":"");
+  lb.classList.toggle("multi",set.length>1)};
+ const go=d=>{k=(k+d+set.length)%set.length;show()};
+ const close=()=>{lb.classList.remove("open");document.body.style.overflow="";im.removeAttribute("src")};
+ document.addEventListener("click",e=>{
+  if(lb.classList.contains("open")){if(e.target.closest("#lbp"))go(-1);else if(e.target.closest("#lbn"))go(1);else close();return}
+  const ph=e.target.closest(".gal .ph,.cgal .ph,.pic");if(!ph)return;
+  const i=ph.querySelector("img");if(!i||!i.naturalWidth)return;
+  const grp=ph.closest("#gal,.cgal .row");
+  set=grp?[...grp.querySelectorAll(".ph img")].filter(x=>x.naturalWidth):[i];
+  k=Math.max(0,set.indexOf(i));show();
+  lb.classList.add("open");document.body.style.overflow="hidden";$("#lbx").focus()});
+ lb.addEventListener("touchstart",e=>{tx=e.touches[0].clientX},{passive:true});
+ lb.addEventListener("touchend",e=>{if(tx===null||set.length<2)return;const d=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(d)>50)go(d<0?1:-1)});
+ addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;
+  if(e.key=="Escape")close();else if(e.key=="ArrowRight"&&set.length>1)go(1);else if(e.key=="ArrowLeft"&&set.length>1)go(-1)});
+})();
+
+// ---- which family are you? quiz ----
+(()=>{const Q=[
+ {q:"What does power mean to you?",o:[["Legacy, held together by a promise","Allard"],["Being unforgettable. Loud, feared, adored","Borghese"],["Patience. Let the moment come to you","Montanari"],["A silence that makes the room go cold","Romanov"],["A smile, a title, and everyone owing you","Winata"],["Knowing which secrets to bury","London"]]},
+ {q:"Pick your Friday night.",o:[["Candlelit dinner, with a plan behind the smile","Allard"],["A party where I'm the main event","Borghese"],["A quiet casino table, just watching","Montanari"],["Alone, snow outside, a glass in hand","Romanov"],["A charity gala. Cameras everywhere","Winata"],["A private club, a handshake, a signed deal","London"]]},
+ {q:"Your biggest weakness?",o:[["The family I can't let go of","Allard"],["My pride. I hate losing","Borghese"],["I trust almost no one","Montanari"],["I forgot how to feel anything","Romanov"],["I need everyone to love me","Winata"],["Everyone has a price. Mine too","London"]]},
+ {q:"The one rule you never break?",o:[["Never betray the family","Allard"],["Never hurt women or children","Borghese"],["No needless cruelty","Montanari"],["No explanations. No apologies","Romanov"],["Never get caught","Winata"],["Never work for free","London"]]},
+ {q:"Choose your ride.",o:[["Black car, trusted driver","Allard"],["Sports car, windows down","Borghese"],["A quiet sedan nobody notices","Montanari"],["Armored SUV, tinted glass","Romanov"],["An official convoy","Winata"],["A black cab. Always","London"]]}];
+ const R={Allard:["THE ALLARD","Loyalty is your religion and legacy is your burden. You wear elegance like armor and hold the people you love a little too tightly."],
+  Borghese:["THE BORGHESE","You do nothing quietly. Charming, ruthless, and oddly principled. You would rather be feared than overlooked."],
+  Montanari:["THE MONTANARI","Calm, patient, always three moves ahead. You never chase an opportunity. You wait until it walks in."],
+  Romanov:["THE ROMANOV","Few understand you and fewer dare to try. Your silence says more than most people's threats."],
+  Winata:["THE WINATA","Smiles, handshakes, a spotless reputation. Why break the system when you can own it?"],
+  London:["THE LONDON SHADOWS","No crown, no throne. Just sharp instincts, useful secrets, and exactly the right door to open."]};
+ const box=$("#quizBox");let i=0,sc={},shareTxt="";
+ function show(){
+  if(i>=Q.length){
+   const rows=Object.entries(sc).sort((a,b)=>b[1]-a[1]),top=rows[0][0],r=R[top];
+   shareTxt=`I got "${r[0]}" on the Which Family Are You? quiz. The Devil's Angel`;
+   const bars=rows.map(([f,n])=>`<div class="rb"><span>${f.toUpperCase()}</span><div><i style="--w:${n/Q.length*100}%;background:${FC[f]}"></i></div><em>${Math.round(n/Q.length*100)}%</em></div>`).join("");
+   box.innerHTML=`<div class="res"><div class="c2">YOUR FAMILY</div><h3 tabindex="-1" id="qh">${r[0]}</h3><p>${r[1]}</p><div class="rbs">${bars}</div><button class="btn" data-meet="${top}">MEET THEIR CHARACTERS</button><button class="btn ghost" data-retry="1">RETAKE</button>${canShare?`<button class="btn ghost" data-share="1">SHARE RESULT</button>`:""}</div>`;
+   box.classList.add("t");box.style.setProperty("--fc",FC[top]);$("#qh").focus({preventScroll:true});return}
+  box.classList.remove("t");const q=Q[i];
+  box.innerHTML=`<div class="qn">QUESTION ${i+1} / ${Q.length}</div><div class="qbar"><div style="width:${i/Q.length*100}%"></div></div><h3 tabindex="-1" id="qh">${q.q}</h3>`+q.o.map((o,j)=>`<button class="qopt" data-f="${o[1]}">${o[0]}</button>`).join("");
+  if(i)$("#qh").focus({preventScroll:true})}
+ box.onclick=e=>{
+  const o=e.target.closest(".qopt"),m=e.target.closest("[data-meet]"),r=e.target.closest("[data-retry]"),sh=e.target.closest("[data-share]");
+  if(o){sc[o.dataset.f]=(sc[o.dataset.f]||0)+1;i++;show()}
+  else if(r){i=0;sc={};show()}
+  else if(sh)shareIt(shareTxt,sh)
+  else if(m){const b=document.querySelector(`#filters button[data-f="${m.dataset.meet}"]`);if(b)b.click();$("#characters").scrollIntoView({behavior:"smooth"})}};
+ show();
+})();
+
+// ---- footer: share button + current year ----
+(()=>{const b=$("#shareBtn");if(canShare){b.hidden=false;b.onclick=()=>shareIt("The Devil's Angel: five crowns, one corrupted law, no clean hands.",b)}
+ const y=new Date().getFullYear();if(y>2024)$("#yr").textContent="2024\u2013"+y})();
+
+// keep fade hints and READ MORE buttons right while scrolling / resizing
+document.addEventListener("scroll",e=>{if(e.target.classList&&e.target.classList.contains("scroll"))fade(e.target)},true);
+addEventListener("resize",()=>document.querySelectorAll(".scroll").forEach(fade));
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>document.querySelectorAll(".scroll").forEach(fade));
+document.addEventListener("click",e=>{const b=e.target.closest(".xp");if(!b)return;
+ const t=b.previousElementSibling,o=t.classList.toggle("open");
+ b.setAttribute("aria-expanded",o);b.textContent=o?"SHOW LESS \u25B2":"READ MORE \u25BC";
+ if(!o){t.scrollTop=0;const r=t.parentNode.getBoundingClientRect();if(r.top<0)t.parentNode.scrollIntoView({block:"start"})}
+ fade(t)});
+post();
+</script>
+</body>
+</html>
