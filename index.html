@@ -507,10 +507,9 @@ function tickCd(){
 }
 tickCd();setInterval(tickCd,30000);
 
-/* ===== Dark mode (first visit follows the phone/computer setting) ===== */
+/* ===== Dark mode (light by default; remembers the visitor's choice) ===== */
 const tIc=()=>$("#theme").textContent=document.body.classList.contains("dark")?"\u2600":"\u263E";
-const sv=load("su-dark");
-if(sv=="1"||(sv===null&&matchMedia("(prefers-color-scheme:dark)").matches))document.body.classList.add("dark");
+if(load("su-dark")=="1")document.body.classList.add("dark");
 tIc();
 $("#theme").onclick=()=>{const d=document.body.classList.toggle("dark");tIc();save("su-dark",d?1:0)};
 
