@@ -46,7 +46,7 @@ nav a:hover,nav a.on{background:var(--gold);color:var(--navy)}
 #results small{color:#777}
 
 /* Hero + stats */
-.hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:var(--white);text-align:center;padding:64px 20px;border-bottom:6px solid var(--gold)}
+.hero{background:linear-gradient(160deg,#0b1d3acc,#13294fcc),url("hero.jpg") center/cover no-repeat,linear-gradient(160deg,var(--navy),var(--navy2));color:var(--white);text-align:center;padding:64px 20px;border-bottom:6px solid var(--gold)}
 .hero h1{font-size:clamp(1.9rem,6vw,3.4rem);color:var(--gold2)}
 .hero p{max-width:620px;margin:10px auto 0;color:#dbe3f3}
 .motto{font-style:italic;font-size:1.2rem;margin-top:14px}
@@ -71,6 +71,7 @@ section{max-width:1150px;margin:auto;padding:46px 16px 8px}
 .box{border-top:4px solid var(--gold);border-radius:var(--r);padding:18px;box-shadow:0 3px 10px #0b1d3a14}
 .box h3{color:var(--navy);margin-bottom:8px}
 .scroll{max-height:170px;overflow-y:auto;padding-right:8px;font-size:.95rem}
+#about .scroll p,#history .scroll p,#life .scroll p{text-indent:1.5em}
 .ul{padding-left:20px;font-size:.92rem}
 
 /* Buttons */
@@ -92,6 +93,9 @@ section{max-width:1150px;margin:auto;padding:46px 16px 8px}
 .org .tile{border:0;border-radius:0;height:120px}
 .org div.t{padding:10px 12px;font-size:.85rem}
 .org b{display:block;color:var(--navy)}
+.orgc{cursor:pointer;transition:.2s}
+.orgc:hover,.orgc:focus-visible{transform:translateY(-4px);box-shadow:0 6px 16px #0b1d3a30}
+.org .t small{display:block;margin-top:4px;font-size:.7rem;opacity:.7;font-family:'Trebuchet MS',sans-serif}
 .era{border-top:4px solid var(--gold);border-radius:var(--r);padding:12px 14px}
 .era b{display:block;font-size:1.6rem;color:var(--gold);font-family:'Trebuchet MS',sans-serif}
 .era h4{color:var(--navy)}
@@ -126,13 +130,14 @@ section{max-width:1150px;margin:auto;padding:46px 16px 8px}
 .ev:before{content:"";position:absolute;left:-31px;top:6px;width:14px;height:14px;background:var(--navy);border:3px solid var(--gold);border-radius:50%}
 .ev time{color:#8a6d0b;font-weight:bold;font-size:.82rem;letter-spacing:1px;text-transform:uppercase}
 .ev h3{color:var(--navy)}
+.vid{display:block;width:100%;max-width:560px;margin-top:10px;border-radius:var(--r);border:2px solid var(--gold);background:#000;box-shadow:0 4px 14px #0b1d3a25}
 
 /* Characters */
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
 .chip{padding:7px 14px;border-radius:20px;border:1px solid var(--navy);background:var(--white);color:var(--navy);font-size:.82rem;cursor:pointer;font-family:'Trebuchet MS',sans-serif}
 .chip.on{background:var(--navy);color:var(--gold2)}
 .cnt{font-size:.8rem;color:#6a5a1f;margin-bottom:8px;font-family:'Trebuchet MS',sans-serif}
-.chars{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(310px,100%),1fr));gap:14px;max-height:min(620px,75vh);overflow-y:auto;padding:4px 8px 4px 4px;border-radius:var(--r)}
+.chars{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(310px,100%),1fr));gap:14px;max-height:min(620px,80vh);overflow-y:auto;padding:4px 8px 4px 4px;border-radius:var(--r)}
 .card{position:relative;display:flex;gap:12px;border-left:4px solid var(--gold);border-radius:var(--r);padding:12px;box-shadow:0 3px 10px #0b1d3a14}
 .pic{flex:0 0 96px;height:128px;border-radius:8px;background:var(--navy);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-size:2rem;overflow:hidden}
 .pic img{width:100%;height:100%;object-fit:cover}
@@ -219,7 +224,7 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
  .search.show{display:block}
 }
 @media(max-width:420px){.card{padding:10px}.pic{flex-basis:84px;height:112px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tick span{animation:none;padding:0}.rv{transition:none}.fac{transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tick span{animation:none;padding:0}.rv{transition:none}.fac{transition:none}.orgc{transition:none}}
 </style>
 </head>
 <body>
@@ -258,14 +263,22 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
 <section id="about" class="rv" data-s="About">
  <h2 class="title">About</h2>
  <div class="grid">
-  <div class="box"><h3>Who We Are</h3><div class="scroll"><p>Replace this text with your lore about Summerset University. Long text will scroll inside this box instead of stretching it.</p><p>Add as many paragraphs as you like.</p><p>Another paragraph to show the scroll working. Another paragraph to show the scroll working. Another paragraph to show the scroll working.</p></div></div>
+  <div class="box"><h3>Where Excellence Meets Legacy</h3><div class="scroll">
+<p>Nestled in the heart of <b>Summerset, California,</b> Summerset University has stood as a beacon of intellect, innovation, and influence since 1850. With its ivy-draped halls and marble spires that pierce the golden coast skyline, Summerset is more than a university—<b>it’s a world unto itself.</b></p>
+<p>Home to visionaries, dreamers, and future world leaders, Summerset University prides itself on cultivating brilliance in every discipline. Our faculty roster boasts Nobel laureates, Pulitzer Prize winners, and industry pioneers. Our alumni network stretches across every continent and industry, shaping the future of politics, art, business, science, and beyond.</p>
+<p>Here, ambition is not merely encouraged—<b>it’s expected.</b></p>
+</div></div>
  </div>
 </section>
 
 <section id="history" class="rv" data-s="History">
  <h2 class="title">History</h2>
  <div class="grid">
-  <div class="box"><h3>Our Story Since 1850</h3><div class="scroll"><p>Founded in 1850, Summerset University began as... (write your history here).</p><p>Add eras, founders, scandals, renovations and more.</p><p>Another paragraph to show the scroll working. Another paragraph to show the scroll working. Another paragraph to show the scroll working.</p></div></div>
+  <div class="box"><h3>From Humble Beginnings to Global Prestige</h3><div class="scroll">
+<p>Founded in 1850 by <b>Sir John Hopkins</b>, an English philanthropist and visionary scholar, Summerset University was built upon a radical ideal: <i>that knowledge should not only enlighten minds but elevate society itself.</i> What began as a modest college with a single stone building has since grown into one of the most prestigious Ivy League institutions in the world.</p>
+<p>During the Civil War, Summerset became a sanctuary for intellectual discourse—hosting debates, sheltering refugees, and fostering political reformers. Through the roaring ’20s, it was a crucible for cultural renaissance; by the 1960s, it stood at the forefront of student activism and academic innovation.</p>
+<p>Today, Summerset remains a living tapestry of tradition and transformation. Its historic Clocktower still chimes over the Rose Court each evening, a reminder that though centuries pass, the Summerset spirit—restless, ambitious, and unyielding—endures.</p>
+</div></div>
  </div>
  <h3 class="sub">Through the Years</h3>
  <div class="hs">
@@ -280,23 +293,21 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
 <section id="life" class="rv" data-s="Student Life">
  <h2 class="title">Student Life</h2>
  <div class="grid">
-  <div class="box"><h3>Life on Campus</h3><div class="scroll"><p>Describe traditions, dorms, events and daily life at Summerset here.</p><p>Another paragraph to show the scroll working. Another paragraph to show the scroll working. Another paragraph to show the scroll working.</p></div></div>
+  <div class="box"><h3>Prestige, Tradition, and the Pursuit of Perfection</h3><div class="scroll">
+<p>Life at Summerset University is anything but ordinary. Between the whispering rose-covered archways and the echoing bell of Hopkins Tower, students live, breathe, and embody the relentless pursuit of excellence. Here, competition is a way of life, and prestige is currency.</p>
+<p>Days are spent in lecture halls where world leaders once sat; nights are a blur of late-night debates, candlelit galas, and rooftop celebrations overlooking the California coast. Every corner of campus hums with ambition—the kind that turns friendships into rivalries and dreams into dynasties.</p>
+<p>Summerset’s social scene is legendary. Its fraternities and sororities are not merely clubs—they’re dynastic institutions. Membership in houses like Delta Iota Chi (DIC), Sigma Lambda Tau (SLT), or The Sunhill Circle can shape one’s future as much as any diploma. Behind each rose garden and gala hall lies a network of secrets, alliances, and whispered names.</p>
+<p>Even the Student Council mirrors the university’s intensity. Under the leadership of its current President, the driven and sharp-witted Edward Barclay, the council has become a powerful force shaping academic policies, social reform, and student prestige. At Summerset, politics isn’t just an extracurricular—it’s an art form.</p>
+<p><i>“Some call it competition. We call it tradition.”</i></p>
+</div></div>
  </div>
  <h3 class="sub">Organizations</h3>
- <div class="hs">
-  <div class="org" data-s="Student Body"><div class="tile"><span>Student Body</span></div><div class="t"><b>Student Body</b>Student council &amp; representatives.</div></div>
-  <div class="org" data-s="Main Sorority"><div class="tile"><span>Sorority</span></div><div class="t"><b>Main Sorority</b>Name &amp; short description.</div></div>
-  <div class="org" data-s="Main Fraternity"><div class="tile"><span>Fraternity</span></div><div class="t"><b>Main Fraternity</b>Name &amp; short description.</div></div>
-  <div class="org" data-s="Athletics Club"><div class="tile"><span>Athletics</span></div><div class="t"><b>Athletics Club</b>Teams &amp; rivalries.</div></div>
-  <div class="org" data-s="Arts Society"><div class="tile"><span>Arts Society</span></div><div class="t"><b>Arts Society</b>Theater, music &amp; more.</div></div>
- </div>
+ <div class="hs" id="orgGrid"></div>
 </section>
 
 <section id="faculties" class="rv" data-s="Faculties">
  <h2 class="title">Faculties</h2>
  <div class="grid" id="facGrid"></div>
- <h3 class="sub">Which faculty fits you?</h3>
- <div class="box" id="quiz"></div>
 </section>
 
 <section id="map" class="rv" data-s="Campus Map">
@@ -310,17 +321,17 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
 <section id="gallery" class="rv" data-s="Gallery">
  <h2 class="title">Gallery</h2>
  <div class="hs">
-  <div class="tile"><span>Main Gate</span></div><div class="tile"><span>Founders' Hall</span></div><div class="tile"><span>Library</span></div>
-  <div class="tile"><span>Courtyard</span></div><div class="tile"><span>Stadium</span></div><div class="tile"><span>Theater</span></div>
+  <div class="tile"><img src="your-image.jpg" alt="Main Gate" loading="lazy" onerror="this.remove()"><span>Main Gate</span></div><div class="tile"><img src="your-image.jpg" alt="Founders&#39; Hall" loading="lazy" onerror="this.remove()"><span>Founders' Hall</span></div><div class="tile"><img src="your-image.jpg" alt="Library" loading="lazy" onerror="this.remove()"><span>Library</span></div>
+  <div class="tile"><img src="your-image.jpg" alt="Courtyard" loading="lazy" onerror="this.remove()"><span>Courtyard</span></div><div class="tile"><img src="your-image.jpg" alt="Stadium" loading="lazy" onerror="this.remove()"><span>Stadium</span></div><div class="tile"><img src="your-image.jpg" alt="Theater" loading="lazy" onerror="this.remove()"><span>Theater</span></div>
  </div>
- <!-- Tip: put an <img src="your-image.jpg" alt="description"> inside any tile -->
+ <!-- Tip: replace each your-image.jpg with your image link. The tile keeps its navy look until a working link is there. -->
 </section>
 
 <section id="news" class="rv" data-s="News &amp; Events">
  <h2 class="title">News &amp; Events</h2>
  <div class="tl">
   <div class="ev"><time>September 1</time><h3>Founders' Day</h3><p>Short description of the event.</p></div>
-  <div class="ev"><time>October 15</time><h3>Homecoming Week</h3><p>Short description of the event.</p><a class="btn" href="https://janitorai.com/" target="_blank" rel="noopener">Learn More</a></div>
+  <div class="ev"><time>October 15</time><h3>Homecoming Week</h3><p>Short description of the event.</p><video class="vid" controls preload="metadata" playsinline poster="" src="homecoming.mp4">Your browser does not support video.</video><a class="btn" style="margin-top:10px" href="https://janitorai.com/" target="_blank" rel="noopener">Learn More</a></div>
   <div class="ev"><time>December 10</time><h3>Winter Gala</h3><p>Short description of the event.</p></div>
  </div>
 </section>
@@ -343,6 +354,11 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
  <div class="cnt" id="cnt" aria-live="polite"></div>
  <div class="chars" id="chars"></div>
  <p class="none" id="none">No characters found.</p>
+</section>
+
+<section id="quizSec" class="rv" data-s="Faculty Quiz">
+ <h2 class="title">Which faculty fits you?</h2>
+ <div class="box" id="quiz"></div>
 </section>
 
 <section id="admissions" class="rv" data-s="Admissions">
@@ -397,6 +413,20 @@ const FACULTIES=[
  ["History & Cultural Studies","🏛️","Heritage, archives and culture.",D("Dean Name Eight","Dean of History & Cultural Studies","Write the dean's description here."),["World History","Archaeology","Museum Studies","Anthropology"]]
 ];
 // status: "Student" or "Staff". faculty must match a name above. img can be "" . link = your Janitor AI bot URL.
+// icon = emoji, label = small text on the tile, img = optional tile picture URL, about = longer text (HTML ok),
+// facts = bullet highlights, leader.status = "Student" or "Staff", leader.img = picture URL, leader.link = Janitor AI bot
+const L=(name,role,bio,status)=>({name,role,bio,status:status||"Student",img:"",link:"https://janitorai.com/"});
+const ORGS=[
+ {name:"Student Body",icon:"🏛️",label:"Student Body",img:"",short:"Student council & representatives.",about:"The Summerset Student Body Association serves as the official voice of the university's student population, overseeing student elections, campus initiatives, academic advocacy, and major university-wide events. At Summerset, a seat on the Council is more than a position—it's an opportunity to build a network that may last a lifetime.",facts:["Academic policy","Social reform","Student elections"],leader:L("Edward Barclay","President of the Student Council","Driven, articulate, and politically sharp, Edward Barclay is the kind of leader who rarely enters a room without knowing what he wants from it.")},
+ {name:"Sigma Lambda Tau (SLT)",icon:"🌹",label:"Sorority",img:"",short:"Glamour, influence, sisterhood.",about:"SLT is famous for lavish parties, exclusive gatherings, and social traditions that outsiders can only speculate about. SLT is fiercely protective of its own: loyalty is sacred, betrayal is permanent, and crossing the wrong sister can cost someone far more than an invitation.",facts:["Founded: 1986","Motto: Loyalty Above All","House: Pink House"],leader:L("Rebecca Barnes","President of Sigma Lambda Tau","The polished, charismatic president of SLT, with a sharp eye for social dynamics and an instinct for recognizing opportunity.")},
+ {name:"Delta Iota Chi (DIC)",icon:"🦁",label:"Fraternity",img:"",short:"Leadership, ambition, and brotherhood.",about:"The undisputed kings of Summerset's fraternity row, DIC have ruled the campus social scene since their founding by the sons of industrial tycoons. Their lavish mansion, The Forge, hosts infamous galas, exclusive parties, and gatherings attended by students whose surnames carry as much weight as their bank accounts.",facts:["Founded: 1940","Motto: Lead, Win, Never Apologize","House: The Forge"],leader:L("Jacob Carter","President of Delta Iota Chi","Charismatic, ambitious, and unapologetically arrogant, he understands how to command a room and turn social connections into leverage.")},
+ {name:"Athletics Club",icon:"🏅",label:"Athletics",img:"",short:"Competitive, elite, and hardwork",about:"The Summerset Athletics Club oversees the university's competitive sports programs, from varsity teams and individual competitions to recreational leagues and intercollegiate tournaments.",facts:["Home stadium","Big rivalry","Championships"],leader:L("Athletics Captain Name","Captain of the Athletics Club","captain's description here.")},
+ {name:"Arts Society",icon:"🎭",label:"Arts Society",img:"",short:"Creativity, bravery, and inspiration",about:"The Summerset Arts Society brings together the university's actors, musicians, writers, filmmakers, and visual artists under one creative community. ",facts:["Yearly showcase","Theater troupe","Orchestra"],leader:L("Arts Society Head Name","Head of the Arts Society","society head's description here.")},
+ {name:"The Stallions",icon:"🏈",label:"Football",img:"",short:"The Summerset football team.",about:"Summerset's pride and joy, the Stallions embody campus prestige through athletic dominance, substantial funding, and constant media attention. Their home stadium fills with thousands of supporters every Friday night, turning football games into major university events.",facts:["Mascot: the Stallion","Home stadium","Big rivalry"],leader:L("Camden Morris","Captain of the Stallions","Ambitious, disciplined captain of the Stallions, carrying the expectations of his teammates, coaches, and his entire family on his shoulders.")},
+ {name:"The Sirens",icon:"📣",label:"Cheer Squad",img:"",short:"The Summerset cheer squad.",about:"Graceful, glamorous, and deceptively disciplined, the Sirens are far more than a cheer squad: they are the public face of Summerset's school spirit.",facts:["Founded: 1990","Signature routine","Competitions"],leader:L("Daphne Calbot","Captain of the Sirens","the poised, commanding captain of the Sirens, known for her polished public image and demanding approach to training.")},
+ {name:"Research Council",icon:"🔬",label:"Research",img:"",short:"Student research & discovery.",about:"The Research Council oversees Summerset's most ambitious student research initiatives in medicine, robotics, and cognitive sciences.",facts:["Current projects","Grants & funding","Annual symposium"],leader:L("Benjamin Larson","Head of the Research Council","Meticulous and enigmatic researcher who values precision, discretion, and results above appearances.")},
+ {name:"The Sunhill Circle",icon:"🌅",label:"Secret Society",img:"",short:"A highclass, secretive circle.",about:"No official university records acknowledge the Sunhill Circle, yet its name circulates through Summerset's most exclusive social circles.",facts:["Invitation only","Founded: 1875","Whispered alliances"],leader:L("Micah Sokolov","Head of the Sunhill Circle","The elusive figure rumored to lead the Sunhill Circle, a man whose influence seems to extend far beyond his visible presence on campus")}
+];
 const CHARS=[
  {name:"Example Student",role:"Law Student, Year 2",status:"Student",faculty:"Law & Humanities",img:"",link:"https://janitorai.com/",desc:"Write the character description here. If it gets long, this box scrolls instead of growing. Add personality, background and more. More text more text more text more text."},
  {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"https://janitorai.com/",desc:"Write the character description here."},
@@ -407,6 +437,8 @@ const HOMECOMING=[10,15,7];
 /* ================================= */
 // Deans are added to the character list automatically from FACULTIES (edit them there)
 CHARS.unshift(...FACULTIES.map(f=>({name:f[3].name,role:f[3].role,status:"Staff",faculty:f[0],img:f[3].img,link:f[3].link,desc:f[3].bio})));
+// Organization leaders are added the same way (edit them in ORGS above)
+CHARS.push(...ORGS.map(o=>({name:o.leader.name,role:o.leader.role,status:o.leader.status,faculty:o.name,img:o.leader.img,link:o.leader.link,desc:o.leader.bio})));
 
 /* ===== Helpers ===== */
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -432,6 +464,13 @@ window.openFac=i=>{const f=FACULTIES[i],d=f[3];
 $("#fmBody").innerHTML=`<div class="ic">${f[1]}</div><h2>${f[0]}</h2><p>${f[2]}</p><h3 class="sub">Dean</h3><div class="card">${person(d.name,d.img,d.role,d.bio,d.link)}</div><h3 class="sub">Courses</h3><ul class="courses">${f[4].map(c=>`<li>${c}</li>`).join("")}</ul><button class="btn" onclick="seePeople(${i})">See students &amp; staff</button>`;
 modal(fm,1);fm.querySelector(".mp").scrollTop=0};
 window.seePeople=i=>{modal(fm,0);fs="All";ff=FACULTIES[i][0];render();$("#people").scrollIntoView()};
+
+/* ===== Organizations ===== */
+$("#orgGrid").innerHTML=ORGS.map((o,i)=>`<div class="org orgc" data-s="${esc(o.name)}" tabindex="0" role="button" onclick="openOrg(${i})" onkeydown="if(event.key=='Enter'||event.key==' '){event.preventDefault();openOrg(${i})}"><div class="tile">${o.img?`<img src="${o.img}" alt="${esc(o.name)}" loading="lazy">`:""}<span>${o.label}</span></div><div class="t"><b>${o.name}</b>${o.short}<small>Tap for details</small></div></div>`).join("");
+window.openOrg=i=>{const o=ORGS[i],d=o.leader;
+$("#fmBody").innerHTML=`<div class="ic">${o.icon}</div><h2>${o.name}</h2><p>${o.short}</p>${o.about?`<div class="scroll" style="max-height:160px;margin-top:10px"><p>${o.about}</p></div>`:""}<h3 class="sub">Leader</h3><div class="card">${person(d.name,d.img,d.role,d.bio,d.link)}</div>${o.facts&&o.facts.length?`<h3 class="sub">Highlights</h3><ul class="courses">${o.facts.map(c=>`<li>${c}</li>`).join("")}</ul>`:""}<button class="btn" onclick="seeLeader(${i})">Find in Characters</button>`;
+modal(fm,1);fm.querySelector(".mp").scrollTop=0};
+window.seeLeader=i=>{modal(fm,0);show(ORGS[i].leader.name)};
 
 /* ===== Characters ===== */
 let fs="All",ff="All";
@@ -507,9 +546,10 @@ function tickCd(){
 }
 tickCd();setInterval(tickCd,30000);
 
-/* ===== Dark mode (light by default; remembers the visitor's choice) ===== */
+/* ===== Dark mode (first visit follows the phone/computer setting) ===== */
 const tIc=()=>$("#theme").textContent=document.body.classList.contains("dark")?"\u2600":"\u263E";
-if(load("su-dark")=="1")document.body.classList.add("dark");
+const sv=load("su-dark");
+if(sv=="1"||(sv===null&&matchMedia("(prefers-color-scheme:dark)").matches))document.body.classList.add("dark");
 tIc();
 $("#theme").onclick=()=>{const d=document.body.classList.toggle("dark");tIc();save("su-dark",d?1:0)};
 
