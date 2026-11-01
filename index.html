@@ -130,6 +130,9 @@ section{max-width:1150px;margin:auto;padding:46px 16px 8px}
 .ev:before{content:"";position:absolute;left:-31px;top:6px;width:14px;height:14px;background:var(--navy);border:3px solid var(--gold);border-radius:50%}
 .ev time{color:#8a6d0b;font-weight:bold;font-size:.82rem;letter-spacing:1px;text-transform:uppercase}
 .ev h3{color:var(--navy)}
+.evscroll{max-height:90vh;overflow-y:auto;padding:4px 10px 4px 14px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.evscroll::-webkit-scrollbar{width:8px}.evscroll::-webkit-scrollbar-thumb{background:var(--gold);border-radius:6px}
+.qt{display:block;margin-top:8px;font-style:italic;color:#8a6d0b}
 .vid{display:block;width:100%;max-width:560px;margin-top:10px;border-radius:var(--r);border:2px solid var(--gold);background:#000;box-shadow:0 4px 14px #0b1d3a25}
 
 /* Characters */
@@ -159,6 +162,7 @@ section{max-width:1150px;margin:auto;padding:46px 16px 8px}
 .faq details{border-left:4px solid var(--gold);border-radius:8px;padding:10px 14px;margin-bottom:8px}
 .faq summary{cursor:pointer;font-weight:bold;color:var(--navy)}
 .faq p{margin-top:8px;font-size:.92rem}
+.faq .by{margin-top:10px;font-size:.78rem;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:#8a6d0b;font-family:'Trebuchet MS',sans-serif}
 .af{display:flex;gap:8px;flex-wrap:wrap}
 .af input,.af select{flex:1 1 140px;padding:8px 12px;border-radius:8px;border:2px solid var(--gold);font-size:.9rem;font-family:inherit;min-width:0}
 .af .btn{margin:0}
@@ -199,7 +203,7 @@ body.dark .box,body.dark .era,body.dark .mp{border-top-color:var(--gold)}
 body.dark .card,body.dark .faq details{border-left-color:var(--gold)}
 body.dark .stat{border-color:var(--gold)}
 body.dark .title,body.dark .box h3,body.dark .info h3,body.dark .ev h3,body.dark .sub,body.dark .org b,body.dark .stat b,body.dark .era h4,body.dark .mp h2,body.dark .x,body.dark .faq summary{color:var(--gold2)}
-body.dark .stat small,body.dark .ev time,body.dark .role,body.dark .qp,body.dark .cnt{color:#d9bd62}
+body.dark .faq .by,body.dark .qt,body.dark .stat small,body.dark .ev time,body.dark .role,body.dark .qp,body.dark .cnt{color:#d9bd62}
 body.dark .chip.on,body.dark .fac:hover,body.dark .fac:focus-visible{background:var(--gold);color:var(--navy)}
 body.dark .fac:hover h3,body.dark .fac:focus-visible h3{color:var(--navy)}
 body.dark .btn.alt2{border-color:var(--gold);color:var(--gold2)}
@@ -229,7 +233,7 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
 <body>
 
 <div id="prog"></div>
-<div class="tick"><span>&#9733; Welcome to Summerset University &nbsp;&bull;&nbsp; Veritas et Virtus &nbsp;&bull;&nbsp; Homecoming Week is coming soon &nbsp;&bull;&nbsp; Edit this announcement in the HTML &#9733;</span></div>
+<div class="tick"><span>&#9733; Welcome to Summerset University &nbsp;&bull;&nbsp; Veritas et Virtus &nbsp;&bull;&nbsp; <b id="tkEv">Check out Events for what&rsquo;s coming up</b> &nbsp;&bull;&nbsp; Go Stallions! &#9733;</span></div>
 <header>
  <div class="bar">
   <a class="brand" href="#top-of-page">
@@ -243,7 +247,7 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
   </div>
   <nav id="nav"><ul>
    <li><a href="#about">About</a></li><li><a href="#history">History</a></li><li><a href="#life">Student Life</a></li>
-   <li><a href="#faculties">Faculties</a></li><li><a href="#map">Map</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#news">News</a></li><li><a href="#people">People</a></li><li><a href="#admissions">Admissions</a></li>
+   <li><a href="#faculties">Faculties</a></li><li><a href="#map">Map</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#events">Events</a></li><li><a href="#news">News</a></li><li><a href="#people">People</a></li><li><a href="#admissions">Admissions</a></li>
   </ul></nav>
  </div>
 </header>
@@ -325,12 +329,33 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
  <!-- Tip: replace each your-image.jpg with your image link. The tile keeps its navy look until a working link is there. -->
 </section>
 
-<section id="news" class="rv" data-s="News &amp; Events">
- <h2 class="title">News &amp; Events</h2>
+<section id="events" class="rv" data-s="Events">
+ <h2 class="title">Events</h2>
+ <div class="evscroll">
  <div class="tl">
-  <div class="ev"><time>September 1</time><h3>Founders' Day</h3><p>Short description of the event.</p></div>
-  <div class="ev"><time>October 15</time><h3>Homecoming Week</h3><p>Short description of the event.</p><video class="vid" controls preload="metadata" playsinline poster="" src="homecoming.mp4">Your browser does not support video.</video><a class="btn" style="margin-top:10px" href="https://janitorai.com/" target="_blank" rel="noopener">Learn More</a></div>
-  <div class="ev"><time>December 10</time><h3>Winter Gala</h3><p>Short description of the event.</p></div>
+  <div class="ev" data-cd="9,1,7"><time>September 1 &ndash; 7</time><h3>Founders' Week</h3><p>A week-long celebration honoring Sir John Hopkins and the founding of the university in 1850. Events include the historical reenactment at Founder&rsquo;s Hall, the torchlit March of Legacy, and the mysterious Veritas Ceremony, which only upperclassmen are invited to attend.</p></div>
+  <div class="ev" data-cd="10,15,7"><time>October 15 &ndash; 21</time><h3>Homecoming</h3><p>Alumni return, banners fly, and the whole campus turns out in navy and gold. The week builds toward the Stallions&rsquo; big home game, with a parade across the quad, a bonfire rally the night before, and reunion dinners.</p></div>
+  <div class="ev" data-cd="10,21,1"><time>October 21</time><h3>Stallions Showdown</h3><p>The football game the whole year builds toward. The Stallions take the field under stadium lights before a sold-out crowd, with the marching band, the cheer squad and every faculty section fighting to be the loudest. Win or lose, the after-parties are legendary.</p></div>
+  <div class="ev" data-cd="11,20,1"><time>November 20</time><h3>Mr. Summerset</h3><p>The crown jewel of campus tradition. What began as a student talent showcase has evolved into a full-fledged cultural phenomenon. Nominees are chosen undergo weeks of interviews, public challenges, and charity events before one emerges as Mr. Summerset&mdash;the embodiment of perfection, influence, and Summerset&rsquo;s ideals.<span class="qt">&ldquo;To wear the crown is to carry the legend.&rdquo;</span></p><video class="vid" controls preload="metadata" playsinline poster="" src="https://file.garden/ad35P9foF0kAW7I8/33mrsummerset.mp4">Your browser does not support video.</video><a class="btn" style="margin-top:10px" href="https://janitorai.com/" target="_blank" rel="noopener">Learn More</a></div>
+  <div class="ev" data-cd="12,10,1"><time>December 10</time><h3>Winter Gala</h3><p>The social event of the season. The Great Hall is draped in silver and midnight blue, string quartets play beneath ice-white chandeliers, and the entire campus dresses to be seen.</p></div>
+  <div class="ev" data-cd="2,14,1"><time>February 14</time><h3>The Midnight Arch Walk</h3><p>Held every Valentine&rsquo;s night, this secretive tradition invites couples to walk beneath the Rose Arch at midnight. Legend says those who do will remain bound together forever&mdash;whether by love, fate, or something much darker.</p></div>
+  <div class="ev" data-cd="4,18,1"><time>April 18</time><h3>Spring Fling Queen</h3><p>The sister event to Mr. Summerset, this pageant celebrates charm, intellect, and grace. The Spring Fling Queen is chosen by a combination of student votes and a faculty panel during a dazzling gala beneath chandeliers and cherry blossoms.</p></div>
+  <div class="ev" data-cd="5,8,1"><time>May 8</time><h3>Summerset Sounds Concert</h3><p>An open-air concert on the main quad to close out the school year. Student bands and campus favorites share the stage with a surprise headliner, and the night ends with fireworks over Founders&rsquo; Hall.</p></div>
+  <div class="ev"><time>By Invitation Only</time><h3>The Sunhill Soir&eacute;e</h3><p>No one admits to receiving an invitation. Those who claim to have attended say it&rsquo;s an event unlike any other&mdash;lavish, silent, and veiled in ritual. Students vanish for the weekend and return with glassy smiles and new influence. Officially, the administration denies its existence. Unofficially? Everyone wants to be invited.</p></div>
+ </div>
+ </div>
+</section>
+
+<section id="news" class="rv" data-s="News">
+ <h2 class="title">News</h2>
+ <div class="faq">
+  <details data-s="Arts Faculty Band HALCYON Sells Out West Coast Tour"><summary>Arts Faculty Band &ldquo;HALCYON&rdquo; Sells Out West Coast Tour</summary><p class="by">December 6 &bull; By Noah Crawford</p><p>A student-led alternative band from the Faculty of Arts, HALCYON, has sold out all dates on their debut West Coast tour. The group formed during a late-night studio session in Founder&rsquo;s Hall and has quickly gained a cult following for their emotionally raw sound and cinematic performances.</p></details>
+  <details data-s="Business Faculty Students Launch Startup Valued at Seven Figures"><summary>Business Faculty Students Launch Startup Valued at Seven Figures</summary><p class="by">December 2 &bull; By Noah Crawford</p><p>A group of third-year Business students unveiled a fintech startup during the annual Innovation Pitch Night&mdash;attracting immediate interest from venture capital firms. Faculty advisors praised the team&rsquo;s &ldquo;cutthroat efficiency and market foresight.&rdquo;</p></details>
+  <details data-s="Summerset Alumni Dominate National Leadership Rankings"><summary>Summerset Alumni Dominate National Leadership Rankings</summary><p class="by">November 28 &bull; By Noah Crawford</p><p>Graduates of Summerset University account for a record number of placements in national leadership rankings across law, medicine, business, and public service. The university reaffirms its commitment to &ldquo;shaping the world&rsquo;s decision-makers.&rdquo;</p></details>
+  <details data-s="Hopkins Tower Bell Undergoes Routine Inspection"><summary>Hopkins Tower Bell Undergoes Routine Inspection</summary><p class="by">November 22 &bull; By Noah Crawford</p><p>Maintenance crews conducted a routine inspection of Hopkins Tower following reports of irregular bell sounds. Officials confirm the clock mechanism is functioning normally.</p></details>
+  <details data-s="Stallions Advance to Conference Finals After Historic Win"><summary>Stallions Advance to Conference Finals After Historic Win</summary><p class="by">November 17 &bull; By Noah Crawford</p><p>The Summerset Stallions delivered a record-breaking performance under the stadium lights, securing their place in the conference finals. Fans flooded the stadium in celebration following the game.</p></details>
+  <details data-s="Research Council Receives Multi-Million Dollar Grant for Biomedical Innovation"><summary>Research Council Receives Multi-Million Dollar Grant for Biomedical Innovation</summary><p class="by">November 11 &bull; By Noah Crawford</p><p>The Summerset Research Council has been awarded a confidential multi-million dollar grant to further its work in advanced biomedical studies. While project details remain restricted, officials confirm the research &ldquo;has global implications.&rdquo;</p></details>
+  <details data-s="Administration Denies Rumors of Sunhill Circle Activity"><summary>Administration Denies Rumors of &ldquo;Sunhill Circle&rdquo; Activity</summary><p class="by">November 5 &bull; By Noah Crawford</p><p>University officials have issued a statement denying the existence of any organization known as the &ldquo;Sunhill Circle.&rdquo;</p></details>
  </div>
 </section>
 
@@ -393,17 +418,17 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
 
 <div class="modal" id="fm"><div class="mp"><button class="x" aria-label="Close">&times;</button><div id="fmBody"></div></div></div>
 <div class="modal" id="lb"><div class="mp"><button class="x" aria-label="Close">&times;</button><div id="lbc"></div><div class="lbn"><button class="btn" id="lbP">&lsaquo; Prev</button><span id="lbi"></span><button class="btn" id="lbN">Next &rsaquo;</button></div></div></div>
-<footer><div class="fl"><a href="#about">About</a><a href="#faculties">Faculties</a><a href="#map">Map</a><a href="#people">People</a><a href="#admissions">Admissions</a></div><b>Summerset University</b> &middot; Veritas et Virtus &middot; Est. 1850<br>A fictional university for a roleplay series on Janitor AI.</footer>
+<footer><div class="fl"><a href="#about">About</a><a href="#faculties">Faculties</a><a href="#map">Map</a><a href="#people">People</a><a href="#admissions">Admissions</a></div><b>Summerset University</b> &middot; Veritas et Virtus &middot; Est. 1850<br>Fictional Series by @Moexran</footer>
 <button id="theme" aria-label="Toggle light or dark mode">&#9790;</button>
 <button id="top" aria-label="Back to top">&uarr;</button>
 
 <script>
-/* ===== EDIT YOUR DATA HERE ===== */
+/* ==EDIT YOUR DATA HERE ==*/
 const D=(name,role,bio,img)=>({name,role,bio,img:img||"",link:"https://janitorai.com/"}); // dean helper: D(name, role, bio, IMAGE URL) - 4th slot = dean picture; link = Janitor AI bot
 const FACULTIES=[
- ["Law & Humanities","⚖️","Justice, language and philosophy.",D("Dean Name One","Dean of Law & Humanities","Write the dean's description here. Scrolls if long.",""),["Constitutional Law","Ethics & Philosophy","Comparative Literature","Debate & Rhetoric"]],
+ ["Law & Humanities","⚖️","Justice, language and philosophy.",D("Lewis Barclay","Dean of Law & Humanities","Write the dean's description here. Scrolls if long.","https://file.garden/ad35P9foF0kAW7I8/3Lewis.jpg"),["Constitutional Law","Ethics & Philosophy","Comparative Literature","Debate & Rhetoric"]],
  ["STEM","🔬","Science, Technology, Engineering & Mathematics.",D("Dean Name Two","Dean of STEM","Write the dean's description here.",""),["Applied Mathematics","Computer Science","Mechanical Engineering","Chemistry"]],
- ["Economy & Business","📈","Markets, management and enterprise.",D("Dean Name Three","Dean of Economy & Business","Write the dean's description here.",""),["Macroeconomics","Corporate Finance","Marketing","Entrepreneurship"]],
+ ["Economy & Business","📈","Markets, management and enterprise.",D("DMarcus Thorne","Dean of Economy & Business","Write the dean's description here.","https://file.garden/ad35P9foF0kAW7I8/3Marcus.jpg"),["Macroeconomics","Corporate Finance","Marketing","Entrepreneurship"]],
  ["Sports & Physical Education","🏅","Athletics and human performance.",D("Dean Name Four","Dean of Sports & Physical Education","Write the dean's description here.",""),["Sports Science","Coaching Theory","Kinesiology","Sports Management"]],
  ["Medicine, Pharmacy & Dentistry","🩺","Healing, research and care.",D("Dean Name Five","Dean of Medicine, Pharmacy & Dentistry","Write the dean's description here.",""),["General Medicine","Pharmacology","Dental Surgery","Public Health"]],
  ["Arts & Theater","🎭","Stage, studio and screen.",D("Dean Name Six","Dean of Arts & Theater","Write the dean's description here.",""),["Acting","Fine Arts","Music Performance","Stage Design"]],
@@ -429,6 +454,10 @@ const ORGS=[
  {name:"The Sunhill Circle",icon:"🌅",label:"Secret Society",img:"",short:"A highclass, secretive circle.",about:"No official university records acknowledge the Sunhill Circle, yet its name circulates through Summerset's most exclusive social circles.",facts:["Invitation only","Founded: 1875","Whispered alliances"],leader:L("Micah Sokolov","Head of the Sunhill Circle","The elusive figure rumored to lead the Sunhill Circle, a man whose influence seems to extend far beyond his visible presence on campus","History Student","Student","")}
 ];
 const CHARS=[
+ {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"https://janitorai.com/",desc:"DESC HERE."},
+ {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"https://janitorai.com/",desc:"DESC HERE."},
+ {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"https://janitorai.com/",desc:"DESC HERE."},
+
  {name:"Johan Aldeberg",role:"Law Student",status:"Student",faculty:"Law & Humanities",img:"https://file.garden/ad35P9foF0kAW7I8/3Johan.jpeg",link:"https://janitorai.com/characters/e2efd9bb-7a50-4c6b-85ad-631b07ae0967_character-johan-aldeberg-mr-summerset",desc:"DESC HERE"},
  {name:"Angelo Alessi",role:"Art Student",status:"Student",faculty:"Arts & Theater",img:"https://file.garden/ad35P9foF0kAW7I8/3Angelo.jpeg",link:"https://janitorai.com/characters/3cabcb97-2573-4088-9f37-71455f70f662_character-angelo-alessi-mr-summerset",desc:"DESC HERE"},
  {name:"Samuel Hartanto",role:"Business Student",status:"Student",faculty:"Economy & Business",img:"https://file.garden/ad35P9foF0kAW7I8/3Samuel.jpeg",link:"https://janitorai.com/characters/a752ad7c-d4f7-41cd-b248-8a4a5d81ad44_character-samuel-hartanto-mr-summerset",desc:"DESC HERE"},
@@ -444,15 +473,13 @@ const CHARS=[
  {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"https://janitorai.com/",desc:"Write the character description here."},
  {name:"Example Athlete",role:"Sports Student, Year 3",status:"Student",faculty:"Sports & Physical Education",img:"",link:"https://janitorai.com/",desc:"Write the character description here."}
 ];
-// Homecoming countdown in the hero: [month (1-12), day, how many days it lasts]
-const HOMECOMING=[10,15,7];
-/* ================================= */
+/* ==============================*/
 // Deans are added to the character list automatically from FACULTIES (edit them there)
 CHARS.unshift(...FACULTIES.map(f=>({name:f[3].name,role:f[3].role,status:"Staff",faculty:f[0],img:f[3].img,link:f[3].link,desc:f[3].bio})));
 // Organization leaders are added the same way (edit them in ORGS above)
 CHARS.push(...ORGS.map(o=>({name:o.leader.name,role:o.leader.role,status:o.leader.status,faculty:o.name,img:o.leader.img,link:o.leader.link,desc:o.leader.bio})));
 
-/* ===== Helpers ===== */
+/* ==Helpers ==*/
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const FAV="♥ Favorites";
 const esc=t=>String(t).replace(/[&<>"']/g,c=>"&#"+c.charCodeAt(0)+";");
@@ -469,7 +496,7 @@ const go=(e,glow)=>{e.scrollIntoView({block:e.matches("section")?"start":"center
 const hd=$("header"),padFix=()=>{document.documentElement.style.scrollPaddingTop=hd.offsetHeight+12+"px"};
 padFix();new ResizeObserver(padFix).observe(hd);
 
-/* ===== Faculties ===== */
+/* ==Faculties ==*/
 $("#facGrid").innerHTML=FACULTIES.map((f,i)=>`<div class="box fac" data-s="${esc(f[0])}" tabindex="0" role="button" onclick="openFac(${i})" onkeydown="if(event.key=='Enter'||event.key==' '){event.preventDefault();openFac(${i})}"><div class="ic">${f[1]}</div><h3>${f[0]}</h3><p>${f[2]}</p><small>Tap for faculty page</small></div>`).join("");
 const fm=$("#fm");
 window.openFac=i=>{const f=FACULTIES[i],d=f[3];
@@ -477,14 +504,14 @@ $("#fmBody").innerHTML=`<div class="ic">${f[1]}</div><h2>${f[0]}</h2><p>${f[2]}<
 modal(fm,1);fm.querySelector(".mp").scrollTop=0};
 window.seePeople=i=>{modal(fm,0);fs="All";ff=FACULTIES[i][0];render();$("#people").scrollIntoView()};
 
-/* ===== Organizations ===== */
+/* ==Organizations ==*/
 $("#orgGrid").innerHTML=ORGS.map((o,i)=>`<div class="org orgc" data-s="${esc(o.name)}" tabindex="0" role="button" onclick="openOrg(${i})" onkeydown="if(event.key=='Enter'||event.key==' '){event.preventDefault();openOrg(${i})}"><div class="tile">${o.img?`<img src="${o.img}" alt="${esc(o.name)}" loading="lazy">`:""}<span>${o.label}</span></div><div class="t"><b>${o.name}</b>${o.short}<small>Tap for details</small></div></div>`).join("");
 window.openOrg=i=>{const o=ORGS[i],d=o.leader;
 $("#fmBody").innerHTML=`<div class="ic">${o.icon}</div><h2>${o.name}</h2><p>${o.short}</p>${o.about?`<div class="scroll" style="max-height:160px;margin-top:10px"><p>${o.about}</p></div>`:""}<h3 class="sub">Leader</h3><div class="card">${person(d.name,d.img,d.role,d.bio,d.link)}</div>${o.facts&&o.facts.length?`<h3 class="sub">Highlights</h3><ul class="courses">${o.facts.map(c=>`<li>${c}</li>`).join("")}</ul>`:""}<button class="btn" onclick="seeLeader(${i})">Find in Characters</button>`;
 modal(fm,1);fm.querySelector(".mp").scrollTop=0};
 window.seeLeader=i=>{modal(fm,0);show(ORGS[i].leader.name)};
 
-/* ===== Characters ===== */
+/* ==Characters ==*/
 let fs="All",ff="All";
 let fav;try{fav=new Set(JSON.parse(load("su-fav")||"[]"))}catch(e){fav=new Set}
 const mkChips=(box,list)=>{$(box).innerHTML=list.map(x=>`<button class="chip" data-v="${esc(x)}">${esc(x)}</button>`).join("")};
@@ -505,7 +532,7 @@ const show=n=>{fs="All";ff="All";render();const c=$$("#chars .card").find(x=>x.d
 $("#rnd").onclick=()=>{fs="All";ff="All";render();const c=$$("#chars .card");go(c[Math.floor(Math.random()*c.length)],1)};
 render();
 
-/* ===== Menu + search ===== */
+/* ==Menu + search ==*/
 const nv=$("#nav"),bg=$("#burger"),sq=$("#q"),res=$("#results");
 const closeNav=()=>{nv.classList.remove("open");bg.setAttribute("aria-expanded","false")};
 bg.onclick=()=>bg.setAttribute("aria-expanded",nv.classList.toggle("open"));
@@ -526,7 +553,7 @@ sq.onkeydown=e=>{if(e.key=="Escape")endSearch();if(e.key=="Enter"&&hits.length&&
 res.onclick=e=>{const a=e.target.closest("a[data-i]");if(!a)return;hits[a.dataset.i].go();endSearch()};
 document.addEventListener("click",e=>{if(!e.target.closest(".search"))res.style.display="none"});
 
-/* ===== Scroll effects ===== */
+/* ==Scroll effects ==*/
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("in")),{threshold:.08});
 $$(".rv").forEach(e=>io.observe(e));
 const tb=$("#top"),prog=$("#prog"),links=$$("nav a"),secs=$$("section");
@@ -538,33 +565,41 @@ addEventListener("scroll",()=>{
  links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==cur));
 },{passive:true});
 
-/* ===== Stats counters ===== */
+/* ==Stats counters ==*/
 const still=matchMedia("(prefers-reduced-motion:reduce)").matches;
 const stats=[[new Date().getFullYear()-1850,"Years of History"],[FACULTIES.length,"Faculties"],[$$("#life .org").length,"Organizations"],[CHARS.length,"Characters"]];
 $("#stats").innerHTML=stats.map(x=>`<div class="stat"><b data-n="${x[0]}">${still?x[0]:0}</b><small>${x[1]}</small></div>`).join("");
 const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const n=+e.target.dataset.n;let i=0;const t=setInterval(()=>{i+=Math.max(1,Math.ceil(n/40));if(i>=n){i=n;clearInterval(t)}e.target.textContent=i},30)}));
 if(!still)$$("[data-n]").forEach(e=>co.observe(e));
 
-/* ===== Homecoming countdown ===== */
-const cd=$("#cd");
+/* ==Nearest-event countdown (reads data-cd="month,day,days" from each event in Events) ==*/
+const cd=$("#cd"),tk=$("#tkEv");
+const EVT=$$("#events .ev[data-cd]").map(e=>{const [m,d,l]=e.dataset.cd.split(",").map(Number);return{name:e.querySelector("h3").textContent,m:m-1,d,l}});
 function tickCd(){
- const n=new Date(),y=n.getFullYear(),m=HOMECOMING[0]-1,d=HOMECOMING[1],len=HOMECOMING[2];
- let s=new Date(y,m,d);const e=new Date(y,m,d+len);
- if(n>=e)s=new Date(y+1,m,d);
- if(n>=s&&n<e){cd.textContent="★ Homecoming Week is happening now! ★";return}
- const t=Math.floor((s-n)/60000),dd=Math.floor(t/1440),hh=Math.floor(t%1440/60),mm=t%60;
- cd.textContent=`Homecoming Week in ${dd}d ${hh}h ${mm}m`;
+ const n=new Date(),y=n.getFullYear();let live=null,next=null;
+ EVT.forEach(v=>{
+  for(const yy of [y-1,y,y+1]){
+   const s=new Date(yy,v.m,v.d),e=new Date(yy,v.m,v.d+v.l);
+   if(n>=s&&n<e){if(!live||s<live.s)live={v,s};return}
+   if(s>n){if(!next||s<next.s)next={v,s};return}
+  }
+ });
+ let t="";
+ if(live)t=`\u2605 ${live.v.name} is happening now! \u2605`;
+ else if(next){const m=Math.floor((next.s-n)/60000),dd=Math.floor(m/1440),hh=Math.floor(m%1440/60),mm=m%60;t=`${next.v.name} in ${dd}d ${hh}h ${mm}m`}
+ if(cd)cd.textContent=t;
+ if(tk&&t)tk.textContent=live?t:`Next up: ${t}`;
 }
 tickCd();setInterval(tickCd,30000);
 
-/* ===== Dark mode (first visit follows the phone/computer setting) ===== */
+/* ==Dark mode (first visit follows the phone/computer setting) ==*/
 const tIc=()=>$("#theme").textContent=document.body.classList.contains("dark")?"\u2600":"\u263E";
 const sv=load("su-dark");
 if(sv=="1"||(sv===null&&matchMedia("(prefers-color-scheme:dark)").matches))document.body.classList.add("dark");
 tIc();
 $("#theme").onclick=()=>{const d=document.body.classList.toggle("dark");tIc();save("su-dark",d?1:0)};
 
-/* ===== Campus map  [name,x,y,w,h,facultyIndex(-1 none),label,description] ===== */
+/* ==Campus map  [name,x,y,w,h,facultyIndex(-1 none),label,description] ==*/
 const BLD=[
  ["Faculty of Law & Humanities",20,20,90,50,0,"Law & Hum.","Home of the law library, moot court and lecture halls."],
  ["Faculty of STEM",135,20,90,50,1,"STEM","Labs, workshops and the observatory."],
@@ -585,7 +620,7 @@ $("#mapInfo").innerHTML=`<h3>${b[0]}</h3><p>${b[7]}</p>${b[5]>=0?`<button class=
 $("#mapInfo").scrollIntoView({block:"nearest",behavior:"smooth"})}
 $$(".bd").forEach(g=>{g.onclick=()=>pickB(g);g.onkeydown=e=>{if(e.key=="Enter"||e.key==" "){e.preventDefault();pickB(g)}}});
 
-/* ===== Faculty quiz (each answer: [text, facultyIndex]) ===== */
+/* ==Faculty quiz (each answer: [text, facultyIndex]) ==*/
 const QZ=[
 ["Your ideal weekend?",[["Debating a hot topic",0],["Building something new",1],["Launching a side hustle",2],["Playing a match",3]]],
 ["Pick a place to spend your day",[["A hospital ward",4],["A theater stage",5],["A busy newsroom",6],["A quiet museum",7]]],
@@ -601,7 +636,7 @@ window.qa=i=>{qs[i]++;qi++;qz()};
 window.qr=()=>{qi=0;qs.fill(0);qz()};
 qz();
 
-/* ===== Admissions (the student ID is remembered on this device) ===== */
+/* ==Admissions (the student ID is remembered on this device) ==*/
 $("#aF").innerHTML=FACULTIES.map(f=>`<option>${esc(f[0])}</option>`).join("");
 const showId=o=>{$("#idc").innerHTML=`<div class="id"><span class="acc">ACCEPTED</span><div class="pic">${esc([...o.n][0].toUpperCase())}</div><div><b>${esc(o.n)}</b><small>${esc(o.f)}</small><small>${esc(o.y)} &middot; Student No. SU-${esc(o.no)}</small><small style="margin-top:4px;font-style:italic">Summerset University &middot; Veritas et Virtus</small></div></div>`};
 $("#aB").onclick=()=>{const n=$("#aN").value.trim();if(!n){$("#aN").focus();return}
@@ -609,7 +644,7 @@ const o={n,f:$("#aF").value,y:$("#aY").value,no:Math.floor(100000+Math.random()*
 $("#aN").onkeydown=e=>{if(e.key=="Enter")$("#aB").click()};
 try{const o=JSON.parse(load("su-id"));if(o&&o.n){showId(o);$("#aN").value=o.n;$("#aF").value=o.f;$("#aY").value=o.y}}catch(e){}
 
-/* ===== Gallery viewer + pop-up controls ===== */
+/* ==Gallery viewer + pop-up controls ==*/
 const gt=$$("#gallery .tile"),lb=$("#lb");let gi=0;
 function gShow(i){gi=(i+gt.length)%gt.length;const c=gt[gi].cloneNode(true);c.removeAttribute("tabindex");c.removeAttribute("role");$("#lbc").replaceChildren(c);$("#lbi").textContent=`${gi+1} / ${gt.length}`;modal(lb,1)}
 gt.forEach((t,i)=>{t.tabIndex=0;t.setAttribute("role","button");t.onclick=()=>gShow(i);t.onkeydown=e=>{if(e.key=="Enter"||e.key==" "){e.preventDefault();gShow(i)}}});
