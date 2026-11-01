@@ -130,7 +130,7 @@ section{max-width:1150px;margin:auto;padding:46px 16px 8px}
 .ev:before{content:"";position:absolute;left:-31px;top:6px;width:14px;height:14px;background:var(--navy);border:3px solid var(--gold);border-radius:50%}
 .ev time{color:#8a6d0b;font-weight:bold;font-size:.82rem;letter-spacing:1px;text-transform:uppercase}
 .ev h3{color:var(--navy)}
-.evscroll{max-height:90vh;overflow-y:auto;padding:4px 10px 4px 14px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.evscroll{max-height:80vh;overflow-y:auto;padding:4px 10px 4px 14px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
 .evscroll::-webkit-scrollbar{width:8px}.evscroll::-webkit-scrollbar-thumb{background:var(--gold);border-radius:6px}
 .qt{display:block;margin-top:8px;font-style:italic;color:#8a6d0b}
 .vid{display:block;width:100%;max-width:560px;margin-top:10px;border-radius:var(--r);border:2px solid var(--gold);background:#000;box-shadow:0 4px 14px #0b1d3a25}
@@ -190,6 +190,8 @@ section{max-width:1150px;margin:auto;padding:46px 16px 8px}
 /* Footer + floating buttons */
 footer{margin-top:50px;background:var(--navy);color:#cfd8ea;text-align:center;padding:26px 16px;border-top:4px solid var(--gold);font-size:.85rem}
 footer b{color:var(--gold2)}
+.fb{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+.fb .btn{margin:0;padding:4px 12px;font-size:.72rem}
 .fl{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
 .fl a{color:var(--gold2);text-decoration:none}
 #top,#theme{position:fixed;right:16px;width:42px;height:42px;border-radius:50%;border:2px solid var(--gold);background:var(--navy);color:var(--gold2);cursor:pointer;z-index:40}
@@ -299,7 +301,7 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
 <p>Life at Summerset University is anything but ordinary. Between the whispering rose-covered archways and the echoing bell of Hopkins Tower, students live, breathe, and embody the relentless pursuit of excellence. Here, competition is a way of life, and prestige is currency.</p>
 <p>Days are spent in lecture halls where world leaders once sat; nights are a blur of late-night debates, candlelit galas, and rooftop celebrations overlooking the California coast. Every corner of campus hums with ambition—the kind that turns friendships into rivalries and dreams into dynasties.</p>
 <p>Summerset’s social scene is legendary. Its fraternities and sororities are not merely clubs—they’re dynastic institutions. Membership in houses like Delta Iota Chi (DIC), Sigma Lambda Tau (SLT), or The Sunhill Circle can shape one’s future as much as any diploma. Behind each rose garden and gala hall lies a network of secrets, alliances, and whispered names.</p>
-<p>Even the Student Council mirrors the university’s intensity. Under the leadership of its current President, the driven and sharp-witted Edward Barclay, the council has become a powerful force shaping academic policies, social reform, and student prestige. At Summerset, politics isn’t just an extracurricular—it’s an art form.</p>
+<p>Even the Student Council mirrors the university’s intensity. Under the leadership of its current President, the driven and sharp-witted Andrew Barclay, the council has become a powerful force shaping academic policies, social reform, and student prestige. At Summerset, politics isn’t just an extracurricular—it’s an art form.</p>
 <p><i>“Some call it competition. We call it tradition.”</i></p>
 </div></div>
  </div>
@@ -398,9 +400,9 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
  </div>
  <h3 class="sub">FAQ</h3>
  <div class="faq">
-  <details><summary>Can I apply to more than one faculty?</summary><p>Write your answer here.</p></details>
-  <details><summary>Are scholarships available?</summary><p>Write your answer here.</p></details>
-  <details><summary>Do students live on campus?</summary><p>Write your answer here.</p></details>
+  <details><summary>Can I apply to more than one faculty?</summary><p>No, students can only apply to one faculty. However, you are welcome to follow classes in other faculties if you are interested.</p></details>
+  <details><summary>Are scholarships available?</summary><p>Yes! Summerset offers scholarships to the best of the best.</p></details>
+  <details><summary>Do students live on campus?</summary><p>First-year students are required to stay in the dorms. After that, you are free to live wherever you want: an apartment, a sorority or fraternity house, or stay in the dorms.</p></details>
  </div>
  <h3 class="sub">Apply to Summerset</h3>
  <div class="box">
@@ -418,32 +420,37 @@ body.dark #mapSvg .nl{fill:var(--gold2)}
 
 <div class="modal" id="fm"><div class="mp"><button class="x" aria-label="Close">&times;</button><div id="fmBody"></div></div></div>
 <div class="modal" id="lb"><div class="mp"><button class="x" aria-label="Close">&times;</button><div id="lbc"></div><div class="lbn"><button class="btn" id="lbP">&lsaquo; Prev</button><span id="lbi"></span><button class="btn" id="lbN">Next &rsaquo;</button></div></div></div>
-<footer><div class="fl"><a href="#about">About</a><a href="#faculties">Faculties</a><a href="#map">Map</a><a href="#people">People</a><a href="#admissions">Admissions</a></div><b>Summerset University</b> &middot; Veritas et Virtus &middot; Est. 1850<br>Fictional Series by @Moexran</footer>
+<footer><div class="fl"><a href="#about">About</a><a href="#faculties">Faculties</a><a href="#map">Map</a><a href="#people">People</a><a href="#admissions">Admissions</a></div>
+<!-- Footer buttons: replace each href with your own link -->
+<div class="fb"><a class="btn alt" href="https://janitorai.com/" target="_blank" rel="noopener">JanitorAI</a><a class="btn alt" href="https://YOUR-WEBSITE-LINK" target="_blank" rel="noopener">Website</a><a class="btn alt" href="https://YOUR-SERVER-INVITE-LINK" target="_blank" rel="noopener">Server (18+)</a></div>
+<b>Summerset University</b> &middot; Veritas et Virtus &middot; Est. 1850<br>Fictional Series by @Moexran</footer>
 <button id="theme" aria-label="Toggle light or dark mode">&#9790;</button>
 <button id="top" aria-label="Back to top">&uarr;</button>
 
 <script>
 /* ==EDIT YOUR DATA HERE ==*/
-const D=(name,role,bio,img)=>({name,role,bio,img:img||"",link:"https://janitorai.com/"}); // dean helper: D(name, role, bio, IMAGE URL) - 4th slot = dean picture; link = Janitor AI bot
+const D=(name,role,bio,img,link)=>({name,role,bio,img:img||"",link:link||""}); // dean helper: D(name, role, bio, IMAGE URL, JANITOR AI LINK) - 4th slot = picture, 5th = bot link (leave "" for Coming Soon)
+// Each dean: D(name, role, bio, IMAGE URL, JANITOR AI LINK). Paste the image link in the 4th "" and the bot link in the 5th "" (empty = Coming Soon!).
 const FACULTIES=[
- ["Law & Humanities","⚖️","Justice, language and philosophy.",D("Lewis Barclay","Dean of Law & Humanities","Write the dean's description here. Scrolls if long.","https://file.garden/ad35P9foF0kAW7I8/3Lewis.jpg"),["Constitutional Law","Ethics & Philosophy","Comparative Literature","Debate & Rhetoric"]],
- ["STEM","🔬","Science, Technology, Engineering & Mathematics.",D("Dean Name Two","Dean of STEM","Write the dean's description here.",""),["Applied Mathematics","Computer Science","Mechanical Engineering","Chemistry"]],
- ["Economy & Business","📈","Markets, management and enterprise.",D("DMarcus Thorne","Dean of Economy & Business","Write the dean's description here.","https://file.garden/ad35P9foF0kAW7I8/3Marcus.jpg"),["Macroeconomics","Corporate Finance","Marketing","Entrepreneurship"]],
- ["Sports & Physical Education","🏅","Athletics and human performance.",D("Dean Name Four","Dean of Sports & Physical Education","Write the dean's description here.",""),["Sports Science","Coaching Theory","Kinesiology","Sports Management"]],
- ["Medicine, Pharmacy & Dentistry","🩺","Healing, research and care.",D("Dean Name Five","Dean of Medicine, Pharmacy & Dentistry","Write the dean's description here.",""),["General Medicine","Pharmacology","Dental Surgery","Public Health"]],
- ["Arts & Theater","🎭","Stage, studio and screen.",D("Dean Name Six","Dean of Arts & Theater","Write the dean's description here.",""),["Acting","Fine Arts","Music Performance","Stage Design"]],
- ["Journalism & Social","📰","Media, society and public voice.",D("Dean Name Seven","Dean of Journalism & Social","Write the dean's description here.",""),["Investigative Reporting","Sociology","Media Studies","Psychology"]],
- ["History & Cultural Studies","🏛️","Heritage, archives and culture.",D("Dean Name Eight","Dean of History & Cultural Studies","Write the dean's description here.",""),["World History","Archaeology","Museum Studies","Anthropology"]]
+ ["Law & Humanities","⚖️","Justice, language and philosophy.",D("Lewis Barclay","Dean of Law & Humanities","Write the dean's description here. Scrolls if long.","https://file.garden/ad35P9foF0kAW7I8/3Lewis.jpg","https://janitorai.com/characters/47301dfb-7977-4a05-9974-b79dd3687746_character-lewis-barclay-candy-cigarettes"),["Constitutional Law","Ethics & Philosophy","Comparative Literature","Debate & Rhetoric"]],
+ ["STEM","🔬","Science, Technology, Engineering & Mathematics.",D("STEM Dean Name","Dean of STEM","DESC HERE.","",""),["Applied Mathematics","Computer Science","Mechanical Engineering","Chemistry"]],
+ ["Economy & Business","📈","Markets, management and enterprise.",D("Marcus Thorne","Dean of Economy & Business","Write the dean's description here.","https://file.garden/ad35P9foF0kAW7I8/3Marcus.jpg","https://janitorai.com/characters/9528f917-70a3-4916-b828-f86506140984_character-marcus-thorne"),["Macroeconomics","Corporate Finance","Marketing","Entrepreneurship"]],
+ ["Sports & Physical Education","🏅","Athletics and human performance.",D("Dean Name Four","Dean of Sports & Physical Education","Write the dean's description here.","",""),["Sports Science","Coaching Theory","Kinesiology","Sports Management"]],
+ ["Medicine, Pharmacy & Dentistry","🩺","Healing, research and care.",D("Dean Name Five","Dean of Medicine, Pharmacy & Dentistry","Write the dean's description here.","",""),["General Medicine","Pharmacology","Dental Surgery","Public Health"]],
+ ["Arts & Theater","🎭","Stage, studio and screen.",D("Dean Name Six","Dean of Arts & Theater","Write the dean's description here.","",""),["Acting","Fine Arts","Music Performance","Stage Design"]],
+ ["Journalism & Social","📰","Media, society and public voice.",D("Dean Name Seven","Dean of Journalism & Social","Write the dean's description here.","",""),["Investigative Reporting","Sociology","Media Studies","Psychology"]],
+ ["History & Cultural Studies","🏛️","Heritage, archives and culture.",D("Dean Name Eight","Dean of History & Cultural Studies","Write the dean's description here.","",""),["World History","Archaeology","Museum Studies","Anthropology"]]
 ];
 // status: "Student" or "Staff". faculty must match a name above. img can be "" . link = your Janitor AI bot URL.
 // icon = emoji, label = small text on the tile, img = optional tile picture URL, about = longer text (HTML ok),
 // facts = bullet highlights, leader.status = "Student" or "Staff", leader.img = picture URL, leader.link = Janitor AI bot
-// L(name, role, bio, studentTitle, status, IMAGE URL): the 6th slot is the leader picture, e.g. L("Name","Role","Bio","Law Student","Student","https://.../pic.jpg").
+// L(name, role, bio, studentTitle, status, IMAGE URL, JANITOR AI LINK): 6th slot = leader picture, 7th = leader bot link (leave out or "" for Coming Soon).
+// e.g. L("Name","Role","Bio","Law Student","Student","https://.../pic.jpg","https://janitorai.com/characters/...")
 // studentTitle (4th) and status (5th) first:
 // L(name, role, bio, studentTitle, status): studentTitle (4th) is added after the role, e.g. "Sports Student". Leave it "" for none.
-const L=(name,role,bio,major,status,img)=>({name,role:major?`${role} &middot; ${major}`:role,bio,status:status||"Student",img:img||"",link:"https://janitorai.com/"});
+const L=(name,role,bio,major,status,img,link)=>({name,role:major?`${role} &middot; ${major}`:role,bio,status:status||"Student",img:img||"",link:link||""});
 const ORGS=[
- {name:"Student Body",icon:"🏛️",label:"Student Body",img:"",short:"Student council & representatives.",about:"The Summerset Student Body Association serves as the official voice of the university's student population, overseeing student elections, campus initiatives, academic advocacy, and major university-wide events. At Summerset, a seat on the Council is more than a position—it's an opportunity to build a network that may last a lifetime.",facts:["Academic policy","Social reform","Student elections"],leader:L("Edward Barclay","President of the Student Council","Driven, articulate, and politically sharp, Edward Barclay is the kind of leader who rarely enters a room without knowing what he wants from it.","Law Student","Student","")},
+ {name:"Student Body",icon:"🏛️",label:"Student Body",img:"",short:"Student council & representatives.",about:"The Summerset Student Body Association serves as the official voice of the university's student population, overseeing student elections, campus initiatives, academic advocacy, and major university-wide events. At Summerset, a seat on the Council is more than a position—it's an opportunity to build a network that may last a lifetime.",facts:["Academic policy","Social reform","Student elections"],leader:L("Andrew Barclay","President of the Student Council","Driven, articulate, and politically sharp, Andrew Barclay is the kind of leader who rarely enters a room without knowing what he wants from it.","Law Student","Student","https://file.garden/ad35P9foF0kAW7I8/3Andrew.jpg")},
  {name:"Sigma Lambda Tau (SLT)",icon:"🌹",label:"Sorority",img:"",short:"Glamour, influence, sisterhood.",about:"SLT is famous for lavish parties, exclusive gatherings, and social traditions that outsiders can only speculate about. SLT is fiercely protective of its own: loyalty is sacred, betrayal is permanent, and crossing the wrong sister can cost someone far more than an invitation.",facts:["Founded: 1986","Motto: Loyalty Above All","House: Pink House"],leader:L("Rebecca Barnes","President of Sigma Lambda Tau","The polished, charismatic president of SLT, with a sharp eye for social dynamics and an instinct for recognizing opportunity.","Journalism Student","Student","")},
  {name:"Delta Iota Chi (DIC)",icon:"🦁",label:"Fraternity",img:"",short:"Leadership, ambition, and brotherhood.",about:"The undisputed kings of Summerset's fraternity row, DIC have ruled the campus social scene since their founding by the sons of industrial tycoons. Their lavish mansion, The Forge, hosts infamous galas, exclusive parties, and gatherings attended by students whose surnames carry as much weight as their bank accounts.",facts:["Founded: 1940","Motto: Lead, Win, Never Apologize","House: The Forge"],leader:L("Jacob Carter","President of Delta Iota Chi","Charismatic, ambitious, and unapologetically arrogant, he understands how to command a room and turn social connections into leverage.","Business Student","Student","")},
  {name:"Athletics Club",icon:"🏅",label:"Athletics",img:"",short:"Competitive, elite, and hardwork",about:"The Summerset Athletics Club oversees the university's competitive sports programs, from varsity teams and individual competitions to recreational leagues and intercollegiate tournaments.",facts:["Home stadium","Big rivalry","Championships"],leader:L("Athletics Captain Name","Captain of the Athletics Club","captain's description here.","Sports Student","Student","")},
@@ -454,24 +461,31 @@ const ORGS=[
  {name:"The Sunhill Circle",icon:"🌅",label:"Secret Society",img:"",short:"A highclass, secretive circle.",about:"No official university records acknowledge the Sunhill Circle, yet its name circulates through Summerset's most exclusive social circles.",facts:["Invitation only","Founded: 1875","Whispered alliances"],leader:L("Micah Sokolov","Head of the Sunhill Circle","The elusive figure rumored to lead the Sunhill Circle, a man whose influence seems to extend far beyond his visible presence on campus","History Student","Student","")}
 ];
 const CHARS=[
- {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"https://janitorai.com/",desc:"DESC HERE."},
- {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"https://janitorai.com/",desc:"DESC HERE."},
- {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"https://janitorai.com/",desc:"DESC HERE."},
+ {name:"Richard Bachtiar",role:"Professor of Architecture",status:"Staff",faculty:"STEM",img:"https://file.garden/ad35P9foF0kAW7I8/3Richard.jpg",link:"https://janitorai.com/characters/ede7bcb2-7a9e-4294-b02e-d10f0e99ca98_character-richard-bachtiar-your-old-school-older-boyfriend",desc:"DESC HERE."},
+ {name:"Lucille Page",role:"Professor of Journalism",status:"Staff",faculty:"Law & Humanities",img:"",link:"",desc:"DESC HERE."},
+
+ {name:"Harvey Weston",role:"Swim Coach",status:"Staff",faculty:"Sports & Physical Education",img:"https://file.garden/ad35P9foF0kAW7I8/3Weston.jpg",link:"https://janitorai.com/characters/e0a1ae23-f825-4c50-847c-7c76a7ec34ed_character-harvey-weston",desc:"DESC HERE."},
+ {name:"Davide Boltenore",role:"Professor of PE",status:"Staff",faculty:"Sports & Physical Education",img:"https://file.garden/ad35P9foF0kAW7I8/3Davide.jpg",link:"",desc:"DESC HERE."},
 
  {name:"Johan Aldeberg",role:"Law Student",status:"Student",faculty:"Law & Humanities",img:"https://file.garden/ad35P9foF0kAW7I8/3Johan.jpeg",link:"https://janitorai.com/characters/e2efd9bb-7a50-4c6b-85ad-631b07ae0967_character-johan-aldeberg-mr-summerset",desc:"DESC HERE"},
+
  {name:"Angelo Alessi",role:"Art Student",status:"Student",faculty:"Arts & Theater",img:"https://file.garden/ad35P9foF0kAW7I8/3Angelo.jpeg",link:"https://janitorai.com/characters/3cabcb97-2573-4088-9f37-71455f70f662_character-angelo-alessi-mr-summerset",desc:"DESC HERE"},
+
  {name:"Samuel Hartanto",role:"Business Student",status:"Student",faculty:"Economy & Business",img:"https://file.garden/ad35P9foF0kAW7I8/3Samuel.jpeg",link:"https://janitorai.com/characters/a752ad7c-d4f7-41cd-b248-8a4a5d81ad44_character-samuel-hartanto-mr-summerset",desc:"DESC HERE"},
+
  {name:"Yuri Volkov",role:"Med Student",status:"Student",faculty:"Medicine, Pharmacy & Dentistry",img:"https://file.garden/ad35P9foF0kAW7I8/3Yuri.jpeg",link:"https://janitorai.com/characters/1b809539-3ef5-4883-a92e-de7d50b89c41_character-yuri-volkov-mr-summerset",desc:"DESC HERE"},
+
  {name:"Ji Hoon Kim",role:"Engineering Student",status:"Student",faculty:"STEM",img:"https://file.garden/ad35P9foF0kAW7I8/3Jihoon.jpeg",link:"https://janitorai.com/characters/4f2eed82-70c0-46d6-a21e-5482f58adfb7_character-ji-hoon-kim-mr-summerset",desc:"DESC HERE"},
 
- {name:"Nathaniel Wolfe",role:"Sports Student",status:"Student",faculty:"Sports & Physical Education",img:"",link:"https://janitorai.com/characters/a4f39180-8569-4cff-9327-6572de8fbe59_character-nathaniel-wolfe-your-clingy-himbo-bestie",desc:"WDESC HERE"},
- {name:"Example Student",role:"Law Student",status:"Student",faculty:"Law & Humanities",img:"",link:"https://janitorai.com/",desc:"DESC HERE"},
- {name:"Example Student",role:"Law Student",status:"Student",faculty:"Law & Humanities",img:"",link:"https://janitorai.com/",desc:"DESC HERE"},
- {name:"Example Student",role:"Law Student",status:"Student",faculty:"Law & Humanities",img:"",link:"https://janitorai.com/",desc:"DESC HERE"},
- {name:"Example Student",role:"Law Student",status:"Student",faculty:"Law & Humanities",img:"",link:"https://janitorai.com/",desc:"DESC HERE"},
+ {name:"Nathaniel Wolfe",role:"Sports Student",status:"Student",faculty:"Sports & Physical Education",img:"https://file.garden/ad35P9foF0kAW7I8/3Nathan.jpg",link:"https://janitorai.com/characters/a4f39180-8569-4cff-9327-6572de8fbe59_character-nathaniel-wolfe-your-clingy-himbo-bestie",desc:"DESC HERE"},
+ {name:"Leslie Chen",role:"Sports Student",status:"Student",faculty:"Sports & Physical Education",img:"https://file.garden/ad35P9foF0kAW7I8/3Leslie.jpg",link:"",desc:"DESC HERE"},
 
- {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"https://janitorai.com/",desc:"Write the character description here."},
- {name:"Example Athlete",role:"Sports Student, Year 3",status:"Student",faculty:"Sports & Physical Education",img:"",link:"https://janitorai.com/",desc:"Write the character description here."}
+ {name:"Oliver Sullivan",role:"Journalism Student",status:"Student",faculty:"Journalism & Social",img:"https://file.garden/ad35P9foF0kAW7I8/3Oliver.jpg",link:"",desc:"DESC HERE"},
+ {name:"Noah Crawford",role:"Journalism Student",status:"Student",faculty:"Journalism & Social",img:"",link:"",desc:"DESC HERE"},
+
+ {name:"Example Student",role:"Law Student",status:"Student",faculty:"Law & Humanities",img:"",link:"",desc:"DESC HERE"},
+ {name:"Example Professor",role:"Professor of Physics",status:"Staff",faculty:"STEM",img:"",link:"",desc:"Write the character description here."},
+ {name:"Example Athlete",role:"Sports Student, Year 3",status:"Student",faculty:"Sports & Physical Education",img:"",link:"",desc:"Write the character description here."}
 ];
 /* ==============================*/
 // Deans are added to the character list automatically from FACULTIES (edit them there)
@@ -485,7 +499,7 @@ const FAV="♥ Favorites";
 const esc=t=>String(t).replace(/[&<>"']/g,c=>"&#"+c.charCodeAt(0)+";");
 const load=k=>{try{return localStorage.getItem(k)}catch(e){return null}};
 const save=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
-const bot=l=>l&&l.trim()?`<a class="btn" href="${l}" target="_blank" rel="noopener">Chat on Janitor AI</a>`:`<span class="btn off">Coming Soon</span>`;
+const bot=l=>l&&l.trim()?`<a class="btn" href="${l}" target="_blank" rel="noopener">Chat on Janitor AI</a>`:`<span class="btn off">Coming Soon!</span>`;
 const person=(n,img,role,desc,link)=>`<div class="pic">${img?`<img src="${img}" alt="${esc(n)}" loading="lazy">`:esc([...n][0])}</div><div class="info"><h3>${esc(n)}</h3><div class="role">${role}</div><div class="scroll">${desc}</div>${bot(link)}</div>`;
 const modal=(m,on)=>{const was=m.classList.contains("open");m.classList.toggle("open",on);document.body.style.overflow=on?"hidden":"";
  if(on&&!was){m._f=document.activeElement;m.querySelector(".x").focus({preventScroll:true})}
